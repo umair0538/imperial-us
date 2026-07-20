@@ -4,6 +4,7 @@ import RelatedProducts from "@/components/product/RelatedProducts";
 import { products } from "@/data/products";
 import { getWhatsAppOrderLink } from "@/utils/whatsapp";
 import { getEmailOrderLink } from "@/utils/email";
+import { notFound } from 'next/navigation';
 
 interface Props {
   params: {
