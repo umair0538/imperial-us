@@ -1,0 +1,26 @@
+.section{
+
+    background:#101010;
+
+    padding:100px 0;
+}
+
+.container{
+
+    max-width:820px;
+
+    margin:auto;
+
+    padding:0 20px;
+}
+
+.container p{
+
+    color:var(--text-secondary);
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    margin-bottom:40px;
+}

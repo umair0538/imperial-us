@@ -1,0 +1,52 @@
+.hero{
+
+    min-height:70vh;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:100px 0;
+}
+
+.content{
+
+    max-width:900px;
+}
+
+.category{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+}
+
+.content h1{
+
+    margin:25px 0;
+
+    font-family:var(--font-heading);
+
+    font-size:clamp(3rem,6vw,5.5rem);
+
+    color:white;
+
+    line-height:1.1;
+}
+
+.meta{
+
+    display:flex;
+
+    gap:15px;
+
+    color:#ddd;
+
+    flex-wrap:wrap;
+}

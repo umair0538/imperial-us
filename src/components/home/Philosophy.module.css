@@ -1,0 +1,29 @@
+.section{
+
+background:#0B0B0B;
+
+padding:180px 0;
+
+}
+
+.container{
+
+width:min(900px,90%);
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.container p{
+
+font-size:1.25rem;
+
+line-height:2;
+
+color:#B8B8B8;
+
+margin-top:50px;
+
+}

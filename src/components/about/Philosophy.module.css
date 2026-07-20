@@ -1,0 +1,59 @@
+.section {
+    background: #111111;
+    padding: 180px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative glow */
+
+.section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    background: radial-gradient(
+        circle,
+        rgba(200, 162, 71, 0.08),
+        transparent 70%
+    );
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    color: var(--gold);
+
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    font-size: .85rem;
+
+    margin-bottom: 40px;
+}
+
+@media (max-width:768px) {
+
+    .section {
+        padding: 120px 0;
+    }
+}

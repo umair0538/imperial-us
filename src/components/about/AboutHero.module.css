@@ -1,0 +1,123 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.75)
+        ),
+        url("/images/about-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(200,162,71,.08),
+            transparent 60%
+        );
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .9rem;
+}
+
+.content h1 {
+    margin: 28px 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: .95;
+    font-weight: 500;
+
+    color: var(--text-primary);
+}
+
+.content p {
+    max-width: 520px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.2rem;
+
+    line-height: 1.9;
+}
+
+.scroll {
+    position: absolute;
+
+    bottom: 40px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--text-secondary);
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    font-size: .8rem;
+
+    animation: bounce 2.5s infinite;
+}
+
+@keyframes bounce {
+
+0%,20%,50%,80%,100%{
+transform:translate(-50%,0);
+}
+
+40%{
+transform:translate(-50%,-10px);
+}
+
+60%{
+transform:translate(-50%,-5px);
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+background-attachment:scroll;
+
+}
+
+.content h1{
+
+font-size:clamp(3rem,12vw,5rem);
+
+}
+
+.content p{
+
+font-size:1rem;
+
+}
+
+}

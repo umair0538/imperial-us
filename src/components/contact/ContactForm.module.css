@@ -1,0 +1,208 @@
+.section{
+
+    background:#111;
+
+    padding:140px 0;
+}
+
+.wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1.1fr;
+
+    gap:90px;
+
+    align-items:center;
+}
+
+.info h2{
+
+    margin:25px 0;
+
+    font-family:var(--font-heading);
+
+    font-size:clamp(3rem,5vw,4.8rem);
+
+    line-height:1.05;
+
+    color:white;
+
+    font-weight:500;
+}
+
+.eyebrow{
+
+    color:var(--gold);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+}
+
+.info > p{
+
+    color:var(--text-secondary);
+
+    line-height:2;
+
+    margin-bottom:55px;
+}
+
+.features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+}
+
+.feature{
+
+    display:flex;
+
+    gap:22px;
+
+    align-items:flex-start;
+}
+
+.feature svg{
+
+    color:var(--gold);
+
+    font-size:1.5rem;
+
+    margin-top:4px;
+
+    flex-shrink:0;
+}
+
+.feature h4{
+
+    color:white;
+
+    margin-bottom:8px;
+
+    font-size:1rem;
+}
+
+.feature p{
+
+    color:var(--text-secondary);
+
+    line-height:1.7;
+}
+
+.form{
+
+    background:#161616;
+
+    padding:50px;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.form input,
+.form textarea{
+
+    width:100%;
+
+    margin-bottom:20px;
+
+    background:#0f0f0f;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    padding:18px 20px;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+    outline:none;
+}
+
+.form textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+}
+
+.form input:focus,
+.form textarea:focus{
+
+    border-color:var(--gold);
+}
+
+.form button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    background:var(--gold);
+
+    color:#111;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.form button:hover{
+
+    transform:translateY(-3px);
+}
+
+@media(max-width:992px){
+
+.wrapper{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.row{
+
+grid-template-columns:1fr;
+
+}
+
+.form{
+
+padding:35px 25px;
+
+}
+
+.info h2{
+
+font-size:3rem;
+
+}
+
+}
