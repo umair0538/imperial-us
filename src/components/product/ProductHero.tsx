@@ -17,11 +17,11 @@ interface Props {
 export default function ProductHero({ product, whatsappLink, emailLink }: Props) {
   const [selectedImage, setSelectedImage] = useState(product.images[0]);
 
-  const onClickUrl = (url) => {
+  const onClickUrl = (url: string) => {
     return () => openInNewTab(url)
   }
 
-  const openInNewTab = (url) => {
+  const openInNewTab = (url: string) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
     if (newWindow) newWindow.opener = null
   }
