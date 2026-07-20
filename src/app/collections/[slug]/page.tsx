@@ -14,6 +14,12 @@ import {
   FaShippingFast,
 } from "react-icons/fa";
 
+interface Props {
+  params: {
+    slug: string;
+  };
+}
+
 export default async function CollectionPage({ params }: Props) {
   const { slug } = await params;
 

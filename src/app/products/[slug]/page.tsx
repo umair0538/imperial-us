@@ -5,6 +5,12 @@ import { products } from "@/data/products";
 import { getWhatsAppOrderLink } from "@/utils/whatsapp";
 import { getEmailOrderLink } from "@/utils/email";
 
+interface Props {
+  params: {
+    slug: string;
+  };
+}
+
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
