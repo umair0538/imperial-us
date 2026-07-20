@@ -10,6 +10,8 @@ import { MdEmail } from "react-icons/md";
 
 interface Props {
   product: Product;
+  whatsappLink: string,
+  emailLink: string,
 }
 
 export default function ProductHero({ product, whatsappLink, emailLink }: Props) {
