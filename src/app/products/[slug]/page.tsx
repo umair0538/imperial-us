@@ -15,12 +15,13 @@ interface Props {
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
-  const whatsappLink = getWhatsAppOrderLink(product);
-  const emailLink = getEmailOrderLink(product);
 
   if (!product) {
     notFound();
   }
+
+  const whatsappLink = getWhatsAppOrderLink(product);
+  const emailLink = getEmailOrderLink(product);
 
   return (
     <main>
