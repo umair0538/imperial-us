@@ -18,7 +18,7 @@ export default function ClassicCollection() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/images/classic-green.png"
+            src="/images/classic/silver/front.png"
             alt="Classic Emerald"
             width={650}
             height={650}

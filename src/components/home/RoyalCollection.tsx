@@ -51,7 +51,7 @@ export default function RoyalCollection() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/images/regent-green.png"
+            src="/images/royal/green/front.png"
             alt="Regent Emerald"
             width={700}
             height={700}
