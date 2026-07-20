@@ -1,10 +1,10 @@
 import { Product } from "@/data/products";
 import { siteConfig } from "@/config/site";
 
-export function getEmailOrderLink(product: Product) {
+export function getEmailOrderLink(product) {
   const subject = `Enquiry about ${product.name}`;
 
-  const body = `Hello ${siteConfig.brandName},
+  const body = `Hello,
 
 I'm interested in purchasing the ${product.name} from the ${product.collection} Collection.
 
