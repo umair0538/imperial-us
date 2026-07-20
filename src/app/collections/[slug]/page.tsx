@@ -35,7 +35,7 @@ export default async function CollectionPage({ params }: Props) {
 
   return (
     <main>
-      <CollectionHero collection={collection} />
+      <CollectionHero />
 
       <CollectionProducts
         collection={collection}
