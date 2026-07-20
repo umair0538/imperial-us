@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 const WHATSAPP_NUMBER = "+923324162936";
 
-export function getWhatsAppOrderLink(product) {
+export function getWhatsAppOrderLink(product: Product) {
   const message = `Hello,
 
 I'm interested in purchasing the ${product.name} from the ${product.collection} Collection.
