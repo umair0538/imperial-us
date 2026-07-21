@@ -33,7 +33,6 @@ export default function Hero() {
         className={styles.video}
         key={videoSrc}
         src={videoSrc}
-        type="video/mp4"
       />
 
       <div className={styles.overlay} />
