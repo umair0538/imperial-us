@@ -31,12 +31,10 @@ export default function Hero() {
         loop
         playsInline
         className={styles.video}
-      >
-        <source
-          src={videoSrc}
-          type="video/mp4"
-        />
-      </video>
+        key={videoSrc}
+        src={videoSrc}
+        type="video/mp4"
+      />
 
       <div className={styles.overlay} />
 

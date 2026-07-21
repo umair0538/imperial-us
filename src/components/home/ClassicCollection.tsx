@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 import styles from "./ClassicCollection.module.css";
 
 export default function ClassicCollection() {
+
+  const openURL = (url: string) => {
+    return () => {
+      window.location.href = url;
+    }
+  }
+
   return (
     <section id="classic" className={styles.section}>
       <div className={styles.container}>
@@ -23,6 +30,7 @@ export default function ClassicCollection() {
             width={650}
             height={650}
             className={styles.image}
+            onClick={openURL("/collections/classic")}
           />
         </motion.div>
 

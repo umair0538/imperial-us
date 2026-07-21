@@ -16,6 +16,13 @@ export default function CollectionProducts({
   collection,
   products,
 }: Props) {
+
+  const openURL = (url: string) => {
+    return () => {
+      window.location.href = url;
+    }
+  }
+
   return (
     <>
       {products.map((product, index) => (
@@ -43,6 +50,7 @@ export default function CollectionProducts({
                 width={700}
                 height={700}
                 priority={index === 0}
+                onClick={openURL(`/products/${product.slug}`)}
               />
             </motion.div>
 
@@ -59,7 +67,9 @@ export default function CollectionProducts({
                 {collection.name} Collection
               </span>
 
-              <h2>{product.name}</h2>
+              <h2 onClick={openURL(`/products/${product.slug}`)}>
+                {product.name}
+              </h2>
 
               <p>{product.description}</p>
 

@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 import styles from "./RoyalCollection.module.css";
 
 export default function RoyalCollection() {
+
+  const openURL = (url: string) => {
+    return () => {
+      window.location.href = url;
+    }
+  }
+
   return (
     <section id="royal" className={styles.section}>
       <div className={styles.container}>
@@ -57,6 +64,7 @@ export default function RoyalCollection() {
             height={700}
             priority
             className={styles.image}
+            onClick={openURL("/collections/royal")}
           />
         </motion.div>
 
