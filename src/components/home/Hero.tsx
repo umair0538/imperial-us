@@ -2,6 +2,8 @@
 
 import styles from "./Hero.module.css";
 import Link from "next/link";
+import { isMobile } from 'react-device-detect';
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
   const scrollToCollections = () => {
@@ -9,6 +11,16 @@ export default function Hero() {
       document.getElementById("royal")?.scrollIntoView({behavior: "smooth",})
     }
   }
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const videoSrc = isClient && isMobile 
+    ? "/videos/hero-mobile.mp4" 
+    : "/videos/hero.mp4";
 
   return (
     <section className={styles.hero}>
@@ -21,7 +33,7 @@ export default function Hero() {
         className={styles.video}
       >
         <source
-          src="/videos/hero.mp4"
+          src={videoSrc}
           type="video/mp4"
         />
       </video>
