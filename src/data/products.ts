@@ -33,7 +33,7 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/royal/green/front.png",
     specifications: {
-      movement: "Japanese Quartz",
+      movement: "Quartz",
       case: "316L Stainless Steel",
       glass: "Sapphire Coated Mineral Glass",
       waterResistance: "3 ATM",
@@ -58,7 +58,7 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/royal/blue/front.png",
     specifications: {
-      movement: "Japanese Quartz",
+      movement: "Quartz",
       case: "316L Stainless Steel",
       glass: "Sapphire Coated Mineral Glass",
       waterResistance: "3 ATM",
@@ -83,7 +83,7 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/royal/black/front.png",
     specifications: {
-      movement: "Japanese Quartz",
+      movement: "Quartz",
       case: "316L Stainless Steel",
       glass: "Sapphire Coated Mineral Glass",
       waterResistance: "3 ATM",
@@ -107,7 +107,7 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/classic/silver/front.png",
     specifications: {
-      movement: "Japanese Quartz",
+      movement: "Quartz",
       case: "316L Stainless Steel",
       glass: "Sapphire Coated Mineral Glass",
       waterResistance: "3 ATM",
@@ -132,7 +132,7 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/classic/black/front.png",
     specifications: {
-      movement: "Japanese Quartz",
+      movement: "Quartz",
       case: "316L Stainless Steel",
       glass: "Sapphire Coated Mineral Glass",
       waterResistance: "3 ATM",
@@ -157,7 +157,7 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/classic/green/front.png",
     specifications: {
-      movement: "Japanese Quartz",
+      movement: "Quartz",
       case: "316L Stainless Steel",
       glass: "Sapphire Coated Mineral Glass",
       waterResistance: "3 ATM",

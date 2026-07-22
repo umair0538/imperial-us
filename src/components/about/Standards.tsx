@@ -21,7 +21,7 @@ const standards = [
     icon: <FaClock />,
     title: "Precision",
     description:
-      "Reliable Japanese movements deliver dependable performance every day."
+      "Reliable movements deliver dependable performance every day."
   },
   {
     icon: <FaShieldAlt />,
