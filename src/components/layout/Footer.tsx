@@ -102,7 +102,11 @@ export default function Footer() {
 
         <div className={styles.socials}>
 
-          <a href="#">
+          <a 
+            href="https://www.instagram.com/shopimperialus/" 
+            target="_blank" 
+            rel="noopener noreferrer">
+
             <FaInstagram />
           </a>
 
@@ -110,7 +114,11 @@ export default function Footer() {
             <FaFacebookF />
           </a>
 
-          <a href="#">
+          <a
+            href="https://www.youtube.com/@imperialus-pk"
+            target="_blank" 
+            rel="noopener noreferrer">
+            
             <FaYoutube />
           </a>
 
