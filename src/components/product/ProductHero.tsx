@@ -80,7 +80,7 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
           <ul className={styles.features}>
             <li>
               <FaCheck />
-              Japanese Quartz Movement
+              Reliable Quartz Movement
             </li>
 
             <li>

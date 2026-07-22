@@ -46,7 +46,7 @@ export default async function CollectionPage({ params }: Props) {
         features={[
           {
             icon: <FaClock />,
-            title: "Japanese Quartz Movement",
+            title: "Reliable Quartz Movement",
             description: "Reliable precision engineered for everyday accuracy.",
           },
           {

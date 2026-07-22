@@ -69,7 +69,7 @@ export default function Craftsmanship() {
 
               <div className={styles.item}>
                 <span>✓</span>
-                Japanese Quartz Movement
+                Reliable Quartz Movement
               </div>
 
               <div className={styles.item}>
