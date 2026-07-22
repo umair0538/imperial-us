@@ -33,7 +33,13 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/royal/green/front.png",
     specifications: {
+      style: "Sports",
+      gender: "Men"
       movement: "Quartz",
+      band_length: "22cm",
+      band_width: "20-29mm",
+      dial_diameter: "41mm",
+      clasp_type: "Folding buckle",
       case: "Stainless Steel",
       glass: "Acrylic Glass",
       waterResistance: "10 ATM",
@@ -58,7 +64,13 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/royal/blue/front.png",
     specifications: {
+      style: "Sports",
+      gender: "Men"
       movement: "Quartz",
+      band_length: "22cm",
+      band_width: "20-29mm",
+      dial_diameter: "41mm",
+      clasp_type: "Folding buckle",
       case: "Stainless Steel",
       glass: "Acrylic Glass",
       waterResistance: "10 ATM",
@@ -83,7 +95,13 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/royal/black/front.png",
     specifications: {
+      style: "Sports",
+      gender: "Men"
       movement: "Quartz",
+      band_length: "22cm",
+      band_width: "20-29mm",
+      dial_diameter: "41mm",
+      clasp_type: "Folding buckle",
       case: "Stainless Steel",
       glass: "Acrylic Glass",
       waterResistance: "10 ATM",
@@ -108,9 +126,14 @@ export const products: Product[] = [
     thumbnail: "/images/classic/silver/front.png",
     specifications: {
       movement: "Quartz",
+      style: "Formal",
+      gender: "Men"
+      movement: "Quartz",
+      band_length: "20cm",
+      dial_diameter: "46mm",
+      clasp_type: "Pin buckle",
       case: "Stainless Steel",
-      glass: "Acrylic Glass",
-      waterResistance: "10 ATM",
+      glass: "Hardlex",
       warranty: "1 Year",
     },
   },
@@ -133,9 +156,14 @@ export const products: Product[] = [
     thumbnail: "/images/classic/black/front.png",
     specifications: {
       movement: "Quartz",
+      style: "Formal",
+      gender: "Men"
+      movement: "Quartz",
+      band_length: "20cm",
+      dial_diameter: "46mm",
+      clasp_type: "Pin buckle",
       case: "Stainless Steel",
-      glass: "Acrylic Glass",
-      waterResistance: "10 ATM",
+      glass: "Hardlex",
       warranty: "1 Year",
     },
   },
@@ -158,9 +186,14 @@ export const products: Product[] = [
     thumbnail: "/images/classic/green/front.png",
     specifications: {
       movement: "Quartz",
+      style: "Formal",
+      gender: "Men"
+      movement: "Quartz",
+      band_length: "20cm",
+      dial_diameter: "46mm",
+      clasp_type: "Pin buckle",
       case: "Stainless Steel",
-      glass: "Acrylic Glass",
-      waterResistance: "10 ATM",
+      glass: "Hardlex",
       warranty: "1 Year",
     },
   },
