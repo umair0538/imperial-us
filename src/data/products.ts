@@ -10,10 +10,10 @@ export interface Product {
     style: string;
     gender: string;
     movement: string;
-    band_length: string;
-    band_width: string;
-    dial_diameter: string;
-    clasp_type: string;
+    bandLength: string;
+    bandWidth: string;
+    dialDiameter: string;
+    claspType: string;
     case: string;
     glass: string;
     waterResistance: string;
@@ -42,10 +42,10 @@ export const products: Product[] = [
       style: "Sports",
       gender: "Men",
       movement: "Quartz",
-      band_length: "22cm",
-      band_width: "20-29mm",
-      dial_diameter: "41mm",
-      clasp_type: "Folding buckle",
+      bandLength: "22cm",
+      bandWidth: "20-29mm",
+      dialDiameter: "41mm",
+      claspType: "Folding buckle",
       case: "Stainless Steel",
       glass: "Acrylic Glass",
       waterResistance: "10 ATM",
@@ -73,10 +73,10 @@ export const products: Product[] = [
       style: "Sports",
       gender: "Men",
       movement: "Quartz",
-      band_length: "22cm",
-      band_width: "20-29mm",
-      dial_diameter: "41mm",
-      clasp_type: "Folding buckle",
+      bandLength: "22cm",
+      bandWidth: "20-29mm",
+      dialDiameter: "41mm",
+      claspType: "Folding buckle",
       case: "Stainless Steel",
       glass: "Acrylic Glass",
       waterResistance: "10 ATM",
@@ -104,10 +104,10 @@ export const products: Product[] = [
       style: "Sports",
       gender: "Men",
       movement: "Quartz",
-      band_length: "22cm",
-      band_width: "20-29mm",
-      dial_diameter: "41mm",
-      clasp_type: "Folding buckle",
+      bandLength: "22cm",
+      bandWidth: "20-29mm",
+      dialDiameter: "41mm",
+      claspType: "Folding buckle",
       case: "Stainless Steel",
       glass: "Acrylic Glass",
       waterResistance: "10 ATM",
@@ -134,12 +134,14 @@ export const products: Product[] = [
       style: "Formal",
       gender: "Men",
       movement: "Quartz",
-      band_length: "20cm",
-      dial_diameter: "46mm",
-      clasp_type: "Pin buckle",
+      bandLength: "20cm",
+      dialDiameter: "46mm",
+      claspType: "Pin buckle",
       case: "Stainless Steel",
       glass: "Hardlex",
       warranty: "1 Year",
+      bandWidth: "",
+      waterResistance: "",
     },
   },
 
@@ -163,12 +165,14 @@ export const products: Product[] = [
       style: "Formal",
       gender: "Men",
       movement: "Quartz",
-      band_length: "20cm",
-      dial_diameter: "46mm",
-      clasp_type: "Pin buckle",
+      bandLength: "20cm",
+      dialDiameter: "46mm",
+      claspType: "Pin buckle",
       case: "Stainless Steel",
       glass: "Hardlex",
       warranty: "1 Year",
+      bandWidth: "",
+      waterResistance: "",
     },
   },
 
@@ -192,12 +196,14 @@ export const products: Product[] = [
       style: "Formal",
       gender: "Men",
       movement: "Quartz",
-      band_length: "20cm",
-      dial_diameter: "46mm",
-      clasp_type: "Pin buckle",
+      bandLength: "20cm",
+      dialDiameter: "46mm",
+      claspType: "Pin buckle",
       case: "Stainless Steel",
       glass: "Hardlex",
       warranty: "1 Year",
+      bandWidth: "",
+      waterResistance: "",
     },
   },
 ];

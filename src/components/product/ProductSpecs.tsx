@@ -32,19 +32,19 @@ export default function ProductSpecs({ product }: Props) {
     },
     {
       label: "Band Width",
-      value: product.specifications.band_width,
+      value: product.specifications.bandWidth,
     },
     {
       label: "Band Length",
-      value: product.specifications.band_length,
+      value: product.specifications.bandLength,
     },
     {
       label: "Dial Diameter",
-      value: product.specifications.dial_diameter,
+      value: product.specifications.dialDiameter,
     },
     {
       label: "Clasp Type",
-      value: product.specifications.clasp_type,
+      value: product.specifications.claspType,
     },
     {
       label: "Water Resistance",
@@ -60,7 +60,7 @@ export default function ProductSpecs({ product }: Props) {
     },
   ];
 
-  specs = specs.filter(spec => spec.value !== undefined);
+  specs = specs.filter(spec => spec.value !== "");
 
   return (
     <section className={styles.section}>
