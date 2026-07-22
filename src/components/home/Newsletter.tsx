@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Newsletter() {
   const [email, setEmail] = useState("");
 
-  const handleSubscribe = async (e: SubmitEvent) => {
+  const handleSubscribe = async (e: any) => {
     e.preventDefault();
 
     if (!email.trim()) {
