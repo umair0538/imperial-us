@@ -7,7 +7,13 @@ export interface Product {
   images: string[];
   thumbnail: string;
   specifications: {
+    style: string;
+    gender: string;
     movement: string;
+    band_length: string;
+    band_width: string;
+    dial_diameter: string;
+    clasp_type: string;
     case: string;
     glass: string;
     waterResistance: string;
