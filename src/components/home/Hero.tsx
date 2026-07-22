@@ -44,7 +44,7 @@ export default function Hero() {
         </span>
 
         <h1>
-          Live Like a King
+          Define Your Presence
         </h1>
 
         <p>

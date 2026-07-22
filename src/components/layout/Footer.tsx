@@ -23,7 +23,7 @@ export default function Footer() {
           />
 
           <p className={styles.tagline}>
-            Live Like a King
+            Define Your Presence
           </p>
 
           <p className={styles.description}>

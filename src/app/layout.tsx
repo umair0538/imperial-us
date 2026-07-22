@@ -16,7 +16,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Imperial US | Live Like a King",
+  title: "Imperial US | Define Your Presence",
   description:
     "Premium watches crafted for modern gentlemen.",
 };
