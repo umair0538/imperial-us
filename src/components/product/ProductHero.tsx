@@ -85,7 +85,7 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
 
             <li>
               <FaCheck />
-              Sapphire Coated Glass
+              Acrylic Glass
             </li>
 
             <li>

@@ -74,7 +74,7 @@ export default function Craftsmanship() {
 
               <div className={styles.item}>
                 <span>✓</span>
-                Sapphire-Coated Glass
+                Acrylic Glass
               </div>
 
               <div className={styles.item}>
