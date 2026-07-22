@@ -34,8 +34,8 @@ export default function Navbar() {
 
         <nav>
 
-          <Link href="/collections/royal">
-            Royal
+          <Link href="/collections/regent">
+            Regent
           </Link>
 
           <Link href="/collections/classic">

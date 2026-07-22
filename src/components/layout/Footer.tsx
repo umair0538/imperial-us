@@ -38,8 +38,8 @@ export default function Footer() {
 
           <h4>Collections</h4>
 
-          <Link href="/collections/royal">
-            Royal Collection
+          <Link href="/collections/regent">
+            Regent Collection
           </Link>
 
           <Link href="/collections/classic">
