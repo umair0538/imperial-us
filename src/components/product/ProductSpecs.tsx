@@ -9,7 +9,15 @@ interface Props {
 }
 
 export default function ProductSpecs({ product }: Props) {
-  const specs = [
+  let specs = [
+    {
+      label: "Style",
+      value: product.specifications.style,
+    },
+    {
+      label: "Gender",
+      value: product.specifications.gender,
+    },
     {
       label: "Movement",
       value: product.specifications.movement,
@@ -21,6 +29,22 @@ export default function ProductSpecs({ product }: Props) {
     {
       label: "Glass",
       value: product.specifications.glass,
+    },
+    {
+      label: "Band Width",
+      value: product.specifications.band_width,
+    },
+    {
+      label: "Band Length",
+      value: product.specifications.band_length,
+    },
+    {
+      label: "Dial Diameter",
+      value: product.specifications.dial_diameter,
+    },
+    {
+      label: "Clasp Type",
+      value: product.specifications.clasp_type,
     },
     {
       label: "Water Resistance",
@@ -35,6 +59,8 @@ export default function ProductSpecs({ product }: Props) {
       value: product.collection,
     },
   ];
+
+  specs = specs.filter(spec => spec.value !== undefined);
 
   return (
     <section className={styles.section}>

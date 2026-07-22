@@ -85,12 +85,12 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
 
             <li>
               <FaCheck />
-              Acrylic Glass
+              {product.specifications.glass}
             </li>
 
             <li>
               <FaCheck />
-              316L Stainless Steel
+              Stainless Steel
             </li>
 
             <li>

@@ -34,7 +34,7 @@ export const products: Product[] = [
     thumbnail: "/images/royal/green/front.png",
     specifications: {
       style: "Sports",
-      gender: "Men"
+      gender: "Men",
       movement: "Quartz",
       band_length: "22cm",
       band_width: "20-29mm",
@@ -65,7 +65,7 @@ export const products: Product[] = [
     thumbnail: "/images/royal/blue/front.png",
     specifications: {
       style: "Sports",
-      gender: "Men"
+      gender: "Men",
       movement: "Quartz",
       band_length: "22cm",
       band_width: "20-29mm",
@@ -96,7 +96,7 @@ export const products: Product[] = [
     thumbnail: "/images/royal/black/front.png",
     specifications: {
       style: "Sports",
-      gender: "Men"
+      gender: "Men",
       movement: "Quartz",
       band_length: "22cm",
       band_width: "20-29mm",
@@ -125,9 +125,8 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/classic/silver/front.png",
     specifications: {
-      movement: "Quartz",
       style: "Formal",
-      gender: "Men"
+      gender: "Men",
       movement: "Quartz",
       band_length: "20cm",
       dial_diameter: "46mm",
@@ -155,9 +154,8 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/classic/black/front.png",
     specifications: {
-      movement: "Quartz",
       style: "Formal",
-      gender: "Men"
+      gender: "Men",
       movement: "Quartz",
       band_length: "20cm",
       dial_diameter: "46mm",
@@ -185,9 +183,8 @@ export const products: Product[] = [
     ],
     thumbnail: "/images/classic/green/front.png",
     specifications: {
-      movement: "Quartz",
       style: "Formal",
-      gender: "Men"
+      gender: "Men",
       movement: "Quartz",
       band_length: "20cm",
       dial_diameter: "46mm",
