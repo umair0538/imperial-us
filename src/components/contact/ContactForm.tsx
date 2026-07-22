@@ -6,10 +6,53 @@ import {
   FaLock,
   FaHeadset,
 } from "react-icons/fa";
-
 import styles from "./ContactForm.module.css";
+import { useState } from "react";
 
 export default function ContactForm() {
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        subject,
+        message,
+      }),
+    });
+
+    const data = await response.json();
+
+    setLoading(false);
+
+    if (data.success) {
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+
+      alert("Thank you! Your message has been sent.");
+    } else {
+      alert(data.message);
+    }
+  };
+
   return (
     <section className={styles.section}>
       <div className="container">
@@ -82,32 +125,45 @@ export default function ContactForm() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: .8 }}
+            onSubmit={handleSubmit}
           >
 
             <div className={styles.row}>
               <input
                 type="text"
                 placeholder="Full Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
               />
 
               <input
                 type="email"
                 placeholder="Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
 
             <input
               type="text"
               placeholder="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              required
             />
 
             <textarea
               rows={7}
               placeholder="How can we help you?"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
             />
 
-            <button type="submit">
-              Send Message
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
             </button>
 
           </motion.form>

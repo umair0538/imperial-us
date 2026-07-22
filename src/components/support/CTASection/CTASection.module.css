@@ -1,0 +1,32 @@
+.cta{
+    margin:120px auto;
+    max-width:900px;
+    text-align:center;
+    padding:80px 24px;
+    border-top:1px solid rgba(212,175,55,.25);
+}
+
+.cta h2{
+    color:white;
+    margin-bottom:20px;
+}
+
+.cta p{
+    color:#cfcfcf;
+    margin-bottom:40px;
+}
+
+.button{
+    display:inline-block;
+    background:#d4af37;
+    color:black;
+    padding:14px 34px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.button:hover{
+    transform:translateY(-2px);
+}

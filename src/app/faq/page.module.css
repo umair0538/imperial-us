@@ -1,0 +1,64 @@
+.container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 24px;
+}
+
+.section {
+    margin-bottom: 80px;
+}
+
+.section h2 {
+    color: #d4af37;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.item {
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    overflow: hidden;
+}
+
+.item summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 20px 24px;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: background 0.25s ease;
+}
+
+.item summary::-webkit-details-marker {
+    display: none;
+}
+
+.item summary::after {
+    content: "+";
+    float: right;
+    color: #d4af37;
+    font-size: 1.3rem;
+}
+
+.item[open] summary::after {
+    content: "−";
+}
+
+.item summary:hover {
+    background: rgba(212,175,55,0.08);
+}
+
+.item p {
+    color: #cfcfcf;
+    line-height: 1.8;
+    padding: 0 24px 24px;
+    margin: 0;
+}
