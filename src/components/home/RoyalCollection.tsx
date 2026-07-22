@@ -25,7 +25,7 @@ export default function RoyalCollection() {
           transition={{ duration: 0.8 }}
         >
           <span className={styles.eyebrow}>
-            Royal Collection
+            Regent Collection
           </span>
 
           <h2>
@@ -37,13 +37,13 @@ export default function RoyalCollection() {
           </h2>
 
           <p>
-            The Royal Collection embodies confidence and sophistication.
+            The Regent Collection embodies confidence and sophistication.
             Crafted for gentlemen who appreciate timeless design and
             commanding presence.
           </p>
 
           <Link
-            href="/collections/royal"
+            href="/collections/regent"
             className={styles.discover}
           >
             DISCOVER COLLECTION
@@ -64,7 +64,7 @@ export default function RoyalCollection() {
             height={700}
             priority
             className={styles.image}
-            onClick={openURL("/collections/royal")}
+            onClick={openURL("/collections/regent")}
           />
         </motion.div>
 

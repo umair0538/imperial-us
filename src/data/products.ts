@@ -17,9 +17,9 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    slug: "royal-emerald",
-    name: "Royal Emerald",
-    collection: "royal",
+    slug: "regent-emerald",
+    name: "Regent Emerald",
+    collection: "regent",
     price: 9999,
     description:
       "A striking emerald dial crafted for gentlemen who appreciate bold elegance and timeless design.",
@@ -42,9 +42,9 @@ export const products: Product[] = [
   },
 
   {
-    slug: "royal-blue",
-    name: "Royal Blue",
-    collection: "royal",
+    slug: "regent-blue",
+    name: "Regent Blue",
+    collection: "regent",
     price: 9999,
     description:
       "Deep blue tones inspired by timeless sophistication.",
@@ -67,9 +67,9 @@ export const products: Product[] = [
   },
 
   {
-    slug: "royal-black",
-    name: "Royal Black",
-    collection: "royal",
+    slug: "regent-black",
+    name: "Regent Black",
+    collection: "regent",
     price: 9999,
     description:
       "Confident. Minimal. Commanding.",

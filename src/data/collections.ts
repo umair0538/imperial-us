@@ -9,10 +9,10 @@ export interface Collection {
 
 export const collections: Collection[] = [
   {
-    slug: "royal",
-    name: "Royal",
+    slug: "regent",
+    name: "Regent",
     title: "Power.\nPrestige.\nPresence.",
-    subtitle: "Royal Collection",
+    subtitle: "Regent Collection",
     description:
       "Designed for gentlemen who lead with confidence.",
     heroImage: "/images/royal/green/banner.jpg",
