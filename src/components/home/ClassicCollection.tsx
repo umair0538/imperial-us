@@ -30,7 +30,7 @@ export default function ClassicCollection() {
             width={650}
             height={650}
             className={styles.image}
-            onClick={openURL("/collections/classic")}
+            onClick={openURL("/collections/watches/classic-watches")}
           />
         </motion.div>
 
@@ -60,7 +60,7 @@ export default function ClassicCollection() {
           </p>
 
           <Link
-            href="/collections/classic"
+            href="/collections/watches/classic-watches"
             className={styles.discover}
           >
             DISCOVER COLLECTION

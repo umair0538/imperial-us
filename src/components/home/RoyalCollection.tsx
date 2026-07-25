@@ -43,7 +43,7 @@ export default function RoyalCollection() {
           </p>
 
           <Link
-            href="/collections/regent"
+            href="/collections/watches/regent-watches"
             className={styles.discover}
           >
             DISCOVER COLLECTION
@@ -64,7 +64,7 @@ export default function RoyalCollection() {
             height={700}
             priority
             className={styles.image}
-            onClick={openURL("/collections/regent")}
+            onClick={openURL("/collections/watches/regent-watches")}
           />
         </motion.div>
 
