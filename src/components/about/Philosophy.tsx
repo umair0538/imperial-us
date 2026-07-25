@@ -28,7 +28,7 @@ export default function Philosophy() {
 
           <p>
             At Imperial US, every second represents an opportunity to
-            move forward. Our timepieces are designed to remind you that
+            move forward. Our accessories are designed to remind you that
             greatness isn't achieved overnight—it's earned through
             discipline, consistency, and the pursuit of excellence.
           </p>

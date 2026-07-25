@@ -15,7 +15,7 @@ const standards = [
     icon: <FaGem />,
     title: "Craftsmanship",
     description:
-      "Premium materials and meticulous attention to detail create timepieces designed to endure."
+      "Premium materials and meticulous attention to detail create accessories designed to endure."
   },
   {
     icon: <FaClock />,

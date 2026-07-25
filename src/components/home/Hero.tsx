@@ -48,7 +48,7 @@ export default function Hero() {
         </h1>
 
         <p>
-          Premium timepieces crafted for
+          Premium accessories crafted for
           modern gentlemen.
         </p>
 
