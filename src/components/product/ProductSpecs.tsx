@@ -58,6 +58,30 @@ export default function ProductSpecs({ product }: Props) {
       label: "Collection",
       value: product.collection,
     },
+    {
+      label: "Color",
+      value: product.specifications.color,
+    },
+    {
+      label: "Frame",
+      value: product.specifications.frame,
+    },
+    {
+      label: "Lenses",
+      value: product.specifications.lenses,
+    },
+    {
+      label: "Shape",
+      value: product.specifications.shape,
+    },
+    {
+      label: "Feature",
+      value: product.specifications.feature,
+    },
+    {
+      label: "Weight",
+      value: product.specifications.weight,
+    }
   ];
 
   specs = specs.filter(spec => spec.value !== "");
@@ -77,7 +101,7 @@ export default function ProductSpecs({ product }: Props) {
           <h2>Technical Details</h2>
 
           <p>
-            Every Imperial US timepiece is designed with precision,
+            Every Imperial US {product.type} is designed with precision,
             durability, and timeless craftsmanship.
           </p>
         </motion.div>

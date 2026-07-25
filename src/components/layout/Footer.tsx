@@ -17,8 +17,8 @@ export default function Footer() {
           <Image
             src="/logo.png"
             alt="Imperial US"
-            width={100}
-            height={65}
+            width={75}
+            height={55}
             priority
           />
 
@@ -27,7 +27,7 @@ export default function Footer() {
           </p>
 
           <p className={styles.description}>
-            Premium timepieces crafted for modern gentlemen.
+            Premium accessories crafted for modern gentlemen.
             Designed with timeless elegance and exceptional quality.
           </p>
 
@@ -38,16 +38,16 @@ export default function Footer() {
 
           <h4>Collections</h4>
 
-          <Link href="/collections/regent">
-            Regent Collection
+          <Link href="/collections/watches/regent-watches">
+            Regent Watches
           </Link>
 
-          <Link href="/collections/classic">
-            Classic Collection
+          <Link href="/collections/watches/classic-watches">
+            Classic Watches
           </Link>
 
-          <Link href="/collections">
-            View All
+          <Link href="/collections/sunglasses/regent-sunglasses">
+            Regent Sunglasses
           </Link>
 
         </div>
@@ -118,7 +118,7 @@ export default function Footer() {
             href="https://www.youtube.com/@imperialus-pk"
             target="_blank" 
             rel="noopener noreferrer">
-            
+
             <FaYoutube />
           </a>
 

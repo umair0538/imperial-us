@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/layout/Footer";
 
 const inter = Inter({

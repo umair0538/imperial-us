@@ -22,6 +22,7 @@ interface Props {
 
 export default async function CollectionPage({ params }: Props) {
   const { slug } = await params;
+  console.log(slug);
 
   const collection = collections.find(
     (c) => c.slug === slug
@@ -35,7 +36,10 @@ export default async function CollectionPage({ params }: Props) {
 
   return (
     <main>
-      <CollectionHero />
+      <CollectionHero
+        name="Watches"
+        subtitle="Timeless Timepieces"
+      />
 
       <CollectionProducts
         collection={collection}

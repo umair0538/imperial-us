@@ -6,6 +6,7 @@ export interface Product {
   description: string;
   images: string[];
   thumbnail: string;
+  type: string;
   specifications: {
     style: string;
     gender: string;
@@ -18,14 +19,23 @@ export interface Product {
     glass: string;
     waterResistance: string;
     warranty: string;
+    color: string;
+    frame: string;
+    lenses: string;
+    shape: string;
+    feature: string;
+    weight: string;
+    material: string;
+    feature1: string;
+    feature2: string;
   };
 }
 
 export const products: Product[] = [
   {
     slug: "regent-emerald",
-    name: "Regent Emerald",
-    collection: "regent",
+    name: "Emerald Regent Watch",
+    collection: "regent-watches",
     price: 9999,
     description:
       "A striking emerald dial crafted for gentlemen who appreciate bold elegance and timeless design.",
@@ -38,6 +48,7 @@ export const products: Product[] = [
       "/images/royal/green/on-hand.png",
     ],
     thumbnail: "/images/royal/green/front.png",
+    type: "watch",
     specifications: {
       style: "Sports",
       gender: "Men",
@@ -50,13 +61,22 @@ export const products: Product[] = [
       glass: "Acrylic Glass",
       waterResistance: "10 ATM",
       warranty: "1 Year",
+      color: "Emerald",
+      frame: "",
+      lenses: "",
+      shape: "",
+      feature: "",
+      weight: "150g",
+      material: "Stainless Steel",
+      feature1: "Reliable Quartz Movement",
+      feature2: "Acrylic Glass",
     },
   },
 
   {
     slug: "regent-blue",
-    name: "Regent Blue",
-    collection: "regent",
+    name: "Blue Regent Watch",
+    collection: "regent-watches",
     price: 9999,
     description:
       "Deep blue tones inspired by timeless sophistication.",
@@ -69,6 +89,7 @@ export const products: Product[] = [
       "/images/royal/blue/on-hand.png",
     ],
     thumbnail: "/images/royal/blue/front.png",
+    type: "watch",
     specifications: {
       style: "Sports",
       gender: "Men",
@@ -81,13 +102,22 @@ export const products: Product[] = [
       glass: "Acrylic Glass",
       waterResistance: "10 ATM",
       warranty: "1 Year",
+      color: "Blue",
+      frame: "",
+      lenses: "",
+      shape: "",
+      feature: "",
+      weight: "150g",
+      material: "Stainless Steel",
+      feature1: "Reliable Quartz Movement",
+      feature2: "Acrylic Glass",
     },
   },
 
   {
     slug: "regent-black",
-    name: "Regent Black",
-    collection: "regent",
+    name: "Black Regent Watch",
+    collection: "regent-watches",
     price: 9999,
     description:
       "Confident. Minimal. Commanding.",
@@ -100,6 +130,7 @@ export const products: Product[] = [
       "/images/royal/black/on-hand.png",
     ],
     thumbnail: "/images/royal/black/front.png",
+    type: "watch",
     specifications: {
       style: "Sports",
       gender: "Men",
@@ -112,12 +143,21 @@ export const products: Product[] = [
       glass: "Acrylic Glass",
       waterResistance: "10 ATM",
       warranty: "1 Year",
+      color: "Black",
+      frame: "",
+      lenses: "",
+      shape: "",
+      feature: "",
+      weight: "150g",
+      material: "Stainless Steel",
+      feature1: "Reliable Quartz Movement",
+      feature2: "Acrylic Glass",
     },
   },
   {
     slug: "classic-silver",
-    name: "Classic Silver",
-    collection: "classic",
+    name: "Silver Classic Watch",
+    collection: "classic-watches",
     price: 9999,
     description:
       "Timeless design meets modern craftsmanship in a watch built for every occasion.",
@@ -130,6 +170,7 @@ export const products: Product[] = [
       "/images/classic/silver/on-hand.png",
     ],
     thumbnail: "/images/classic/silver/front.png",
+    type: "watch",
     specifications: {
       style: "Formal",
       gender: "Men",
@@ -138,17 +179,26 @@ export const products: Product[] = [
       dialDiameter: "46mm",
       claspType: "Pin buckle",
       case: "Stainless Steel",
-      glass: "Hardlex",
+      glass: "Mineral Glass",
       warranty: "1 Year",
       bandWidth: "",
       waterResistance: "",
+      color: "Silver",
+      frame: "",
+      lenses: "",
+      shape: "",
+      feature: "",
+      weight: "150g",
+      material: "Stainless Steel",
+      feature1: "Reliable Quartz Movement",
+      feature2: "Mineral Glass",
     },
   },
 
   {
     slug: "classic-black",
-    name: "Classic Black",
-    collection: "classic",
+    name: "Black Classic Watch",
+    collection: "classic-watches",
     price: 9999,
     description:
       "A sleek black timepiece designed for understated confidence and everyday sophistication.",
@@ -161,6 +211,7 @@ export const products: Product[] = [
       "/images/classic/black/on-hand.png",
     ],
     thumbnail: "/images/classic/black/front.png",
+    type: "watch",
     specifications: {
       style: "Formal",
       gender: "Men",
@@ -169,17 +220,26 @@ export const products: Product[] = [
       dialDiameter: "46mm",
       claspType: "Pin buckle",
       case: "Stainless Steel",
-      glass: "Hardlex",
+      glass: "Mineral Glass",
       warranty: "1 Year",
       bandWidth: "",
       waterResistance: "",
+      color: "Black",
+      frame: "",
+      lenses: "",
+      shape: "",
+      feature: "",
+      weight: "150g",
+      material: "Stainless Steel",
+      feature1: "Reliable Quartz Movement",
+      feature2: "Mineral Glass",
     },
   },
 
   {
     slug: "classic-green",
-    name: "Classic Green",
-    collection: "classic",
+    name: "Green Classic Watch",
+    collection: "classic-watches",
     price: 9999,
     description:
       "A refined green timepiece crafted for timeless elegance and everyday sophistication.",
@@ -192,6 +252,7 @@ export const products: Product[] = [
       "/images/classic/green/on-hand.png",
     ],
     thumbnail: "/images/classic/green/front.png",
+    type: "watch",
     specifications: {
       style: "Formal",
       gender: "Men",
@@ -200,10 +261,142 @@ export const products: Product[] = [
       dialDiameter: "46mm",
       claspType: "Pin buckle",
       case: "Stainless Steel",
-      glass: "Hardlex",
+      glass: "Mineral Glass",
       warranty: "1 Year",
       bandWidth: "",
       waterResistance: "",
+      color: "Green",
+      frame: "",
+      lenses: "",
+      shape: "",
+      feature: "",
+      weight: "150g",
+      material: "Stainless Steel",
+      feature1: "Reliable Quartz Movement",
+      feature2: "Mineral Glass",
+    },
+  },
+
+  {
+    slug: "regent-sunglasses-golden",
+    name: "Golden Regent Sunglasses",
+    collection: "regent-sunglasses",
+    price: 4999,
+    description:
+      "The Regent Golden combines a sleek black frame with refined gold detailing to create a confident, timeless look. "
+      + "Designed for those who appreciate understated luxury, it delivers premium comfort, UV400 protection, and "
+      + "effortless versatility from business meetings to weekend escapes.",
+    images: [
+      "/images/regent-sunglasses/golden/front.png",
+      "/images/regent-sunglasses/golden/angle.png",
+      "/images/regent-sunglasses/golden/back.png",
+      "/images/regent-sunglasses/golden/on-face.png",
+    ],
+    thumbnail: "/images/regent-sunglasses/golden/front.png",
+    type: "sunglasses",
+    specifications: {
+      style: "Casual",
+      color: "Golden",
+      gender: "Men",
+      frame: "Full rim",
+      lenses: "UV400",
+      shape: "Square",
+      feature: "Anti-Radiation",
+      weight: "65g",
+      movement: "",
+      bandLength: "",
+      dialDiameter: "",
+      claspType: "",
+      case: "",
+      glass: "",
+      warranty: "1 Year",
+      bandWidth: "",
+      waterResistance: "",
+      material: "Metal",
+      feature1: "UV400 Protection",
+      feature2: "Anti-Radiation",
+    },
+  },
+
+  {
+    slug: "regent-sunglasses-silver",
+    name: "Silver Regent Sunglasses",
+    collection: "regent-sunglasses",
+    price: 4999,
+    description:
+      "The Regent Silver pairs a classic black frame with polished silver accents for a clean, contemporary aesthetic. "
+      + "Its balanced design complements both formal and casual styles, offering premium craftsmanship, all-day comfort, "
+      + "and UV400 protection for every occasion.",
+    images: [
+      "/images/regent-sunglasses/silver/front.png",
+      "/images/regent-sunglasses/silver/angle.png",
+      "/images/regent-sunglasses/silver/back.png",
+      "/images/regent-sunglasses/silver/on-face.png",
+    ],
+    thumbnail: "/images/regent-sunglasses/silver/front.png",
+    type: "sunglasses",
+    specifications: {
+      style: "Casual",
+      color: "Silver",
+      gender: "Men",
+      frame: "Full rim",
+      lenses: "UV400",
+      shape: "Square",
+      feature: "Anti-Radiation",
+      weight: "65g",
+      movement: "",
+      bandLength: "",
+      dialDiameter: "",
+      claspType: "",
+      case: "",
+      glass: "",
+      warranty: "1 Year",
+      bandWidth: "",
+      waterResistance: "",
+      material: "Metal",
+      feature1: "UV400 Protection",
+      feature2: "Anti-Radiation",
+    },
+  },
+
+  {
+    slug: "regent-sunglasses-brown",
+    name: "Brown Regent Sunglasses",
+    collection: "regent-sunglasses",
+    price: 4999,
+    description:
+      "The Regent Brown features rich bronze-inspired finishes and gradient brown lenses that bring warmth and sophistication "
+      + "to every look. Crafted for versatility and everyday comfort, it combines premium materials with UV400 protection to "
+      + "create eyewear that feels as refined as it looks.",
+    images: [
+      "/images/regent-sunglasses/brown/front.png",
+      "/images/regent-sunglasses/brown/angle.png",
+      "/images/regent-sunglasses/brown/back.png",
+      "/images/regent-sunglasses/brown/on-face.png",
+    ],
+    thumbnail: "/images/regent-sunglasses/brown/front.png",
+    type: "sunglasses",
+    specifications: {
+      style: "Casual",
+      color: "Brown",
+      gender: "Men",
+      frame: "Full rim",
+      lenses: "UV400",
+      shape: "Square",
+      feature: "Anti-Radiation",
+      weight: "65g",
+      movement: "",
+      bandLength: "",
+      dialDiameter: "",
+      claspType: "",
+      case: "",
+      glass: "",
+      warranty: "1 Year",
+      bandWidth: "",
+      waterResistance: "",
+      material: "Metal",
+      feature1: "UV400 Protection",
+      feature2: "Anti-Radiation",
     },
   },
 ];

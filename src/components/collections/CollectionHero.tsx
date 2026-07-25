@@ -3,7 +3,15 @@
 import { motion } from "framer-motion";
 import styles from "./CollectionHero.module.css";
 
-export default function CollectionHero() {
+interface Props {
+  name?: string;
+  subtitle?: string;
+}
+
+export default function CollectionHero({
+  name,
+  subtitle,
+}: Props) {
   return (
     <section className={styles.hero}>
 
@@ -14,10 +22,10 @@ export default function CollectionHero() {
         transition={{ duration: 1 }}
       >
 
-        <span>Collections</span>
+        <span>{name}</span>
 
         <h1>
-          Timeless Timepieces
+          {subtitle}
           <br />
           Crafted for Modern Gentlemen
         </h1>

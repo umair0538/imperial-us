@@ -9,8 +9,8 @@ export interface Collection {
 
 export const collections: Collection[] = [
   {
-    slug: "regent",
-    name: "Regent",
+    slug: "regent-watches",
+    name: "Regent Watches",
     title: "Power.\nPrestige.\nPresence.",
     subtitle: "Regent Collection",
     description:
@@ -18,12 +18,21 @@ export const collections: Collection[] = [
     heroImage: "/images/royal/green/banner.jpg",
   },
   {
-    slug: "classic",
-    name: "Classic",
+    slug: "classic-watches",
+    name: "Classic Watches",
     title: "Timeless.\nElegant.\nRefined.",
     subtitle: "Classic Collection",
     description:
       "Inspired by understated sophistication.",
+    heroImage: "/images/classic/silver/banner.jpg",
+  },
+  {
+    slug: "regent-sunglasses",
+    name: "Regent Sunglasses",
+    title: "Modern Luxury.\nTimeless Presence.",
+    subtitle: "Regent Sunglasses Collection",
+    description:
+      "Minimal in design. Bold in character. The Regent Collection blends timeless aesthetics with modern craftsmanship, creating luxury accessories made to accompany every moment with confidence.",
     heroImage: "/images/classic/silver/banner.jpg",
   },
 ];

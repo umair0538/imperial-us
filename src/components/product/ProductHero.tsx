@@ -80,17 +80,17 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
           <ul className={styles.features}>
             <li>
               <FaCheck />
-              Reliable Quartz Movement
+              {product.specifications.feature1}
             </li>
 
             <li>
               <FaCheck />
-              {product.specifications.glass}
+              {product.specifications.feature2}
             </li>
 
             <li>
               <FaCheck />
-              Stainless Steel
+              {product.specifications.material}
             </li>
 
             <li>
