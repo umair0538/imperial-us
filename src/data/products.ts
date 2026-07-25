@@ -1,3 +1,8 @@
+interface Video {
+  src: string;
+  thumbnail: string;
+}
+
 export interface Product {
   slug: string;
   name: string;
@@ -5,6 +10,7 @@ export interface Product {
   price: number;
   description: string;
   images: string[];
+  videos: Video[];
   thumbnail: string;
   type: string;
   specifications: {
@@ -47,6 +53,7 @@ export const products: Product[] = [
       "/images/royal/green/clasp.png",
       "/images/royal/green/on-hand.png",
     ],
+    videos:[],
     thumbnail: "/images/royal/green/front.png",
     type: "watch",
     specifications: {
@@ -88,6 +95,7 @@ export const products: Product[] = [
       "/images/royal/blue/clasp.png",
       "/images/royal/blue/on-hand.png",
     ],
+    videos:[],
     thumbnail: "/images/royal/blue/front.png",
     type: "watch",
     specifications: {
@@ -129,6 +137,7 @@ export const products: Product[] = [
       "/images/royal/black/clasp.png",
       "/images/royal/black/on-hand.png",
     ],
+    videos:[],
     thumbnail: "/images/royal/black/front.png",
     type: "watch",
     specifications: {
@@ -169,6 +178,7 @@ export const products: Product[] = [
       "/images/classic/silver/clasp.png",
       "/images/classic/silver/on-hand.png",
     ],
+    videos:[],
     thumbnail: "/images/classic/silver/front.png",
     type: "watch",
     specifications: {
@@ -210,6 +220,7 @@ export const products: Product[] = [
       "/images/classic/black/clasp.png",
       "/images/classic/black/on-hand.png",
     ],
+    videos:[],
     thumbnail: "/images/classic/black/front.png",
     type: "watch",
     specifications: {
@@ -251,6 +262,7 @@ export const products: Product[] = [
       "/images/classic/green/clasp.png",
       "/images/classic/green/on-hand.png",
     ],
+    videos:[],
     thumbnail: "/images/classic/green/front.png",
     type: "watch",
     specifications: {
@@ -291,6 +303,12 @@ export const products: Product[] = [
       "/images/regent-sunglasses/golden/angle.png",
       "/images/regent-sunglasses/golden/back.png",
       "/images/regent-sunglasses/golden/on-face.png",
+    ],
+    videos: [
+      {
+        src: "/videos/regent-sunglasses/golden/showcase.mp4",
+        thumbnail: "/images/regent-sunglasses/golden/angle.png",
+      }
     ],
     thumbnail: "/images/regent-sunglasses/golden/front.png",
     type: "sunglasses",
@@ -333,6 +351,12 @@ export const products: Product[] = [
       "/images/regent-sunglasses/silver/back.png",
       "/images/regent-sunglasses/silver/on-face.png",
     ],
+    videos: [
+      {
+        src: "/videos/regent-sunglasses/silver/showcase.mp4",
+        thumbnail: "/images/regent-sunglasses/silver/angle.png",
+      }
+    ],
     thumbnail: "/images/regent-sunglasses/silver/front.png",
     type: "sunglasses",
     specifications: {
@@ -373,6 +397,12 @@ export const products: Product[] = [
       "/images/regent-sunglasses/brown/angle.png",
       "/images/regent-sunglasses/brown/back.png",
       "/images/regent-sunglasses/brown/on-face.png",
+    ],
+    videos: [
+      {
+        src: "/videos/regent-sunglasses/brown/showcase.mp4",
+        thumbnail: "/images/regent-sunglasses/brown/angle.png",
+      }
     ],
     thumbnail: "/images/regent-sunglasses/brown/front.png",
     type: "sunglasses",

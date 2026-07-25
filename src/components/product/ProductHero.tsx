@@ -32,13 +32,25 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
         {/* LEFT COLUMN */}
         <div className={styles.gallery}>
           <div className={styles.mainImage}>
-            <Image
-              src={selectedImage}
-              alt={product.name}
-              width={650}
-              height={650}
-              priority
-            />
+            {selectedImage.endsWith(".png") ? (
+              <Image
+                src={selectedImage}
+                alt={product.name}
+                width={650}
+                height={650}
+                priority
+              />
+            ):(
+              <video
+                controls
+                playsInline
+                autoPlay
+                muted
+                loop
+              >
+              <source src={selectedImage} type="video/mp4" />
+            </video>
+            )}
           </div>
 
           <div className={styles.thumbnails}>
@@ -56,6 +68,26 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
                   width={90}
                   height={90}
                 />
+              </button>
+            ))}
+
+            {product.videos.map((video) => (
+              <button
+                key={video.src}
+                className={`${styles.thumb} ${
+                  selectedImage === video.src ? styles.active : ""
+                }`}
+                onClick={() => setSelectedImage(video.src)}
+              >
+                <div className={styles.videoThumb}>
+                  <Image
+                    src={video.thumbnail}
+                    alt={product.name}
+                    width={90}
+                    height={90}
+                  />
+                  <div className={styles.playButton}>▶</div>
+                </div>
               </button>
             ))}
           </div>
