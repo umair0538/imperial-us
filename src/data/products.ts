@@ -293,7 +293,7 @@ export const products: Product[] = [
     slug: "regent-sunglasses-golden",
     name: "Golden Regent Sunglasses",
     collection: "regent-sunglasses",
-    price: 4999,
+    price: 2999,
     description:
       "The Regent Golden combines a sleek black frame with refined gold detailing to create a confident, timeless look. "
       + "Designed for those who appreciate understated luxury, it delivers premium comfort, UV400 protection, and "
@@ -340,7 +340,7 @@ export const products: Product[] = [
     slug: "regent-sunglasses-silver",
     name: "Silver Regent Sunglasses",
     collection: "regent-sunglasses",
-    price: 4999,
+    price: 2999,
     description:
       "The Regent Silver pairs a classic black frame with polished silver accents for a clean, contemporary aesthetic. "
       + "Its balanced design complements both formal and casual styles, offering premium craftsmanship, all-day comfort, "
@@ -387,7 +387,7 @@ export const products: Product[] = [
     slug: "regent-sunglasses-brown",
     name: "Brown Regent Sunglasses",
     collection: "regent-sunglasses",
-    price: 4999,
+    price: 2999,
     description:
       "The Regent Brown features rich bronze-inspired finishes and gradient brown lenses that bring warmth and sophistication "
       + "to every look. Crafted for versatility and everyday comfort, it combines premium materials with UV400 protection to "
