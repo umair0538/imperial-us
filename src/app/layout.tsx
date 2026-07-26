@@ -32,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${cormorant.variable}`}
       >
+        <Analytics />
         <Navbar />
           {children}
         <Footer />
