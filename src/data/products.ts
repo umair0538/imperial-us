@@ -34,6 +34,9 @@ export interface Product {
     material: string;
     feature1: string;
     feature2: string;
+    buckleType: string;
+    length: string;
+    width: string;
   };
 }
 
@@ -77,6 +80,9 @@ export const products: Product[] = [
       material: "Stainless Steel",
       feature1: "Reliable Quartz Movement",
       feature2: "Acrylic Glass",
+      buckleType: "",
+      length: "",
+      width: ""
     },
   },
 
@@ -119,6 +125,9 @@ export const products: Product[] = [
       material: "Stainless Steel",
       feature1: "Reliable Quartz Movement",
       feature2: "Acrylic Glass",
+      buckleType: "",
+      length: "",
+      width: ""
     },
   },
 
@@ -161,6 +170,9 @@ export const products: Product[] = [
       material: "Stainless Steel",
       feature1: "Reliable Quartz Movement",
       feature2: "Acrylic Glass",
+      buckleType: "",
+      length: "",
+      width: ""
     },
   },
   {
@@ -202,6 +214,9 @@ export const products: Product[] = [
       material: "Stainless Steel",
       feature1: "Reliable Quartz Movement",
       feature2: "Mineral Glass",
+      buckleType: "",
+      length: "",
+      width: ""
     },
   },
 
@@ -244,6 +259,9 @@ export const products: Product[] = [
       material: "Stainless Steel",
       feature1: "Reliable Quartz Movement",
       feature2: "Mineral Glass",
+      buckleType: "",
+      length: "",
+      width: ""
     },
   },
 
@@ -286,6 +304,9 @@ export const products: Product[] = [
       material: "Stainless Steel",
       feature1: "Reliable Quartz Movement",
       feature2: "Mineral Glass",
+      buckleType: "",
+      length: "",
+      width: ""
     },
   },
 
@@ -333,6 +354,9 @@ export const products: Product[] = [
       material: "Metal",
       feature1: "UV400 Protection",
       feature2: "Anti-Radiation",
+      buckleType: "",
+      length: "",
+      width: ""
     },
   },
 
@@ -380,6 +404,9 @@ export const products: Product[] = [
       material: "Metal",
       feature1: "UV400 Protection",
       feature2: "Anti-Radiation",
+      buckleType: "",
+      length: "",
+      width: ""
     },
   },
 
@@ -427,6 +454,141 @@ export const products: Product[] = [
       material: "Metal",
       feature1: "UV400 Protection",
       feature2: "Anti-Radiation",
+      buckleType: "",
+      length: "",
+      width: ""
+    },
+  },
+
+  {
+    slug: "statesman-belt-black",
+    name: "Black Statesman Belt",
+    collection: "statesman-belts",
+    price: 4999,
+    description:
+      "The Statesman Black is the definition of timeless versatility. Crafted from premium leather with a sleek automatic buckle, "
+      + "it delivers clean lines and understated sophistication for both business and formal occasions. Designed for everyday "
+      + "comfort and lasting durability, it's the finishing touch to a confident, refined wardrobe.",
+    images: [
+      "/images/statesman/black/front.png",
+      "/images/statesman/black/horizontal.png",
+      "/images/statesman/black/on-waist.png",
+    ],
+    videos:[],
+    thumbnail: "/images/statesman/black/front.png",
+    type: "belt",
+    specifications: {
+      style: "Formal",
+      color: "Black",
+      gender: "Men",
+      frame: "",
+      lenses: "",
+      shape: "",
+      feature: "",
+      weight: "300g",
+      movement: "",
+      bandLength: "",
+      dialDiameter: "",
+      claspType: "",
+      case: "",
+      glass: "",
+      warranty: "1 Year",
+      bandWidth: "",
+      waterResistance: "",
+      material: "Cow Hide",
+      feature1: "Cow Hide Leather",
+      feature2: "Auto Lock Buckle",
+      buckleType: "Auto Lock Buckle",
+      length: "110-130cm",
+      width: "3.4cm"
+    },
+  },
+
+  {
+    slug: "statesman-belt-dark-brown",
+    name: "Brown Statesman Belt",
+    collection: "statesman-belts",
+    price: 4999,
+    description:
+      "The Statesman Dark Brown pairs rich espresso leather with a refined automatic buckle, offering a warm, distinguished "
+      + "look that transitions effortlessly from the office to evening wear. Crafted from premium materials for lasting "
+      + "comfort and durability, it's a timeless accessory designed to elevate every outfit.",
+    images: [
+      "/images/statesman/dark-brown/front.png",
+      "/images/statesman/dark-brown/horizontal.png",
+      "/images/statesman/dark-brown/on-waist.png",
+    ],
+    videos:[],
+    thumbnail: "/images/statesman/dark-brown/front.png",
+    type: "belt",
+    specifications: {
+      style: "Formal",
+      color: "Dark Brown",
+      gender: "Men",
+      frame: "",
+      lenses: "",
+      shape: "",
+      feature: "",
+      weight: "300g",
+      movement: "",
+      bandLength: "",
+      dialDiameter: "",
+      claspType: "",
+      case: "",
+      glass: "",
+      warranty: "1 Year",
+      bandWidth: "",
+      waterResistance: "",
+      material: "Cow Hide",
+      feature1: "Cow Hide Leather",
+      feature2: "Auto Lock Buckle",
+      buckleType: "Auto Lock Buckle",
+      length: "110-130cm",
+      width: "3.4cm"
+    },
+  },
+
+  {
+    slug: "statesman-belt-light-brown",
+    name: "Light Brown Statesman Belt",
+    collection: "statesman-belts",
+    price: 4999,
+    description:
+      "The Statesman Light Brown showcases warm cognac-inspired leather that brings effortless sophistication to smart-casual "
+      + "and business attire alike. Crafted from premium materials with a sleek automatic buckle, it combines everyday comfort, "
+      + "enduring quality, and timeless style for the modern gentleman.",
+    images: [
+      "/images/statesman/light-brown/front.png",
+      "/images/statesman/light-brown/horizontal.png",
+      "/images/statesman/light-brown/on-waist.png",
+    ],
+    videos:[],
+    thumbnail: "/images/statesman/light-brown/front.png",
+    type: "belt",
+    specifications: {
+      style: "Formal",
+      color: "Light Brown",
+      gender: "Men",
+      frame: "",
+      lenses: "",
+      shape: "",
+      feature: "",
+      weight: "300g",
+      movement: "",
+      bandLength: "",
+      dialDiameter: "",
+      claspType: "",
+      case: "",
+      glass: "",
+      warranty: "1 Year",
+      bandWidth: "",
+      waterResistance: "",
+      material: "Cow Hide",
+      feature1: "Cow Hide Leather",
+      feature2: "Auto Lock Buckle",
+      buckleType: "Auto Lock Buckle",
+      length: "110-130cm",
+      width: "3.4cm"
     },
   },
 ];

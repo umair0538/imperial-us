@@ -35,4 +35,13 @@ export const collections: Collection[] = [
       "Minimal in design. Bold in character. The Regent Collection blends timeless aesthetics with modern craftsmanship, creating luxury accessories made to accompany every moment with confidence.",
     heroImage: "/images/classic/silver/banner.jpg",
   },
+  {
+    slug: "statesman-belts",
+    name: "Statesman Belts",
+    title: "Confident.\nVersatile.\nRefined.",
+    subtitle: "Statesman Belts Collection",
+    description:
+      "Crafted to complete the modern gentleman's wardrobe, the Belt Collection combines premium materials, timeless design, and everyday versatility for a confident, refined look.",
+    heroImage: "/images/statesman/black/banner.jpg",
+  },
 ];

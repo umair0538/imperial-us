@@ -6,6 +6,7 @@ import Philosophy from "@/components/home/Philosophy";
 import WhyImperial from "@/components/home/WhyImperial";
 import Newsletter from "@/components/home/Newsletter";
 import RegentSunglassesCollection from "@/components/home/RegentSunglassesCollection";
+import StatesmanCollection from "@/components/home/StatesmanCollection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <RoyalCollection />
       <ClassicCollection />
       <RegentSunglassesCollection />
+      <StatesmanCollection />
       <Philosophy />
       <WhyImperial />
       <Newsletter/>

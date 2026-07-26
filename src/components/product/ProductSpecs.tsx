@@ -81,6 +81,18 @@ export default function ProductSpecs({ product }: Props) {
     {
       label: "Weight",
       value: product.specifications.weight,
+    },
+    {
+      label: "Buckle Type",
+      value: product.specifications.buckleType,
+    },
+    {
+      label: "Length",
+      value: product.specifications.length,
+    },
+    {
+      label: "Width",
+      value: product.specifications.width,
     }
   ];
 

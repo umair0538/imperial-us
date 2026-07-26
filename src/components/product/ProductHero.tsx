@@ -122,12 +122,12 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
 
             <li>
               <FaCheck />
-              {product.specifications.material}
+              1-Year Warranty
             </li>
 
             <li>
               <FaCheck />
-              1-Year Warranty
+              Free delivery Nationwide
             </li>
           </ul>
 

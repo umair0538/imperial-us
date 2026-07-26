@@ -11,11 +11,11 @@ export const navigation = [
         title: "Watches",
         items: [
           {
-            label: "Regent Collection",
+            label: "Regent",
             href: "/collections/watches/regent-watches",
           },
           {
-            label: "Classic Collection",
+            label: "Classic",
             href: "/collections/watches/classic-watches",
           },
         ],
@@ -24,8 +24,17 @@ export const navigation = [
         title: "Sunglasses",
         items: [
           {
-            label: "Regent Collection",
+            label: "Regent",
             href: "/collections/sunglasses/regent-sunglasses",
+          },
+        ],
+      },
+      {
+        title: "Leather Belts",
+        items: [
+          {
+            label: "Statesman",
+            href: "/collections/belts/statesman-belts",
           },
         ],
       },
