@@ -58,7 +58,7 @@ export default function RegentSunglassesCollection() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/images/regent-sunglasses/golden/front.png"
+            src="/images/regent-sunglasses/brown/collection-banner.png"
             alt="Gold Regent Sunglasses"
             width={700}
             height={700}

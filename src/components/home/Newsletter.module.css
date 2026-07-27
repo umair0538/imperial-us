@@ -1,6 +1,13 @@
 .section{
 
-background:#090909;
+background: linear-gradient(
+      to bottom,
+      #111111 0%,
+      #0D0D0D 10%,
+      #090909 20%,
+      #050505 90%,
+      #050505 100%
+    );
 
 padding:180px 0;
 

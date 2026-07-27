@@ -25,7 +25,7 @@ export default function StatesmanCollection() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/images/statesman/black/front.png"
+            src="/images/statesman/black/banner.png"
             alt="Statesman Black"
             width={650}
             height={650}

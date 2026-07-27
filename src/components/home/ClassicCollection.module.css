@@ -1,6 +1,14 @@
 .section{
 
-    background:#111111;
+    background: linear-gradient(
+      to bottom,
+      #111111 0%,
+      #222222 10%,
+      #333333 20%,
+      #333333 80%,
+      #222222 90%,
+      #111111 100%
+    );
 
     min-height:100vh;
 
@@ -106,15 +114,17 @@
 
     align-items:center;
 
-    color:white;
+    color:#c8a247;
 
     text-decoration:none;
 
     letter-spacing:3px;
 
-    font-size:.85rem;
+    font-size:1rem;
 
     text-transform:uppercase;
+
+    font-weight:bold;
 
 }
 
