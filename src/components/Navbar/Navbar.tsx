@@ -26,10 +26,10 @@ export default function Navbar() {
 
                 <Link href="/" className={styles.logo}>
           <Image
-            src="/logo.png"
+            src="/logo-golden.png"
             alt="Imperial US"
-            width={75}
-            height={55}
+            width={85}
+            height={50}
             priority
           />
         </Link>
