@@ -51,6 +51,7 @@ export default function OrderDetails({
 
           <OrderItems
             items={order.order_items}
+            orderId={order.id}
           />
 
         </div>

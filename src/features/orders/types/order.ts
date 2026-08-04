@@ -16,6 +16,10 @@ export interface OrderItem {
   quantity: number;
   unit_price: number;
   subtotal: number;
+  review?: {
+    id: string;
+    rating: number;
+  };
 }
 
 export interface ShippingAddress {

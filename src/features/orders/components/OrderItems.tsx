@@ -1,6 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+
+interface Review {
+  id: string;
+}
 
 interface OrderItem {
   id: string;
@@ -9,14 +14,17 @@ interface OrderItem {
   quantity: number;
   unit_price: number;
   total_price: number;
+  review: Review
 }
 
 interface Props {
   items: OrderItem[];
+  orderId: string;
 }
 
 export default function OrderItems({
   items,
+  orderId,
 }: Props) {
   return (
     <section className="rounded-xl border border-zinc-800 bg-[#111111] p-8">
@@ -62,6 +70,24 @@ export default function OrderItems({
                 {Number(item.total_price).toLocaleString()}
               </p>
             </div>
+
+            {
+                item.review
+                    ? (
+                        <Link
+                            href={`/account/reviews/${item.review.id}/edit`}
+                        >
+                            Edit Review
+                        </Link>
+                    )
+                    : (
+                        <Link
+                            href={`/account/orders/${orderId}/review/${item.id}`}
+                        >
+                            Leave Review
+                        </Link>
+                    )
+            }
           </div>
         ))}
 

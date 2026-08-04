@@ -71,8 +71,14 @@ export class OrderRepository {
       .from("orders")
       .select(`
         *,
-        order_items(*)
-      `)
+        order_items(
+          *,
+          reviews(
+            id,
+            rating
+          )
+        )
+    `)
       .eq("user_id", userId)
       .order("created_at", {
         ascending: false,
@@ -86,8 +92,14 @@ export class OrderRepository {
       .from("orders")
       .select(`
         *,
-        order_items(*)
-      `)
+        order_items(
+          *,
+          reviews(
+            id,
+            rating
+          )
+        )
+    `)
       .eq("id", orderId)
       .eq("user_id", userId)
       .single();

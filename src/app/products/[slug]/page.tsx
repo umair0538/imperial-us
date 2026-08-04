@@ -5,6 +5,8 @@ import { CatalogueService } from "@/lib/services/catalogue.service";
 import { getWhatsAppOrderLink } from "@/lib/utils/whatsapp";
 import { getEmailOrderLink } from "@/lib/utils/email";
 import { notFound } from 'next/navigation';
+import { ReviewService } from "@/lib/services/review.service";
+import ProductReviews from "@/components/product/ProductReviews"
 
 interface Props {
   params: {
@@ -24,6 +26,9 @@ export default async function ProductPage({ params }: Props) {
   const emailLink = getEmailOrderLink(product);
   const relatedProducts = await CatalogueService.getRelatedProducts(product);
 
+  const reviewSummary = await ReviewService.getReviewSummary(product.id);
+  const reviews = await ReviewService.getProductReviews(product.id);
+
   return (
     <main>
       <ProductHero 
@@ -31,6 +36,7 @@ export default async function ProductPage({ params }: Props) {
         whatsappLink={whatsappLink}
         emailLink={emailLink}
       />
+      <ProductReviews reviewSummary={reviewSummary.data} reviews={reviews}/>
       <ProductSpecs product={product} />
       <RelatedProducts product={product} relatedProducts={relatedProducts} />
     </main>
