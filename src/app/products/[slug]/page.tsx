@@ -1,9 +1,9 @@
 import ProductHero from "@/components/product/ProductHero";
 import ProductSpecs from "@/components/product/ProductSpecs";
 import RelatedProducts from "@/components/product/RelatedProducts";
-import { products } from "@/data/products";
-import { getWhatsAppOrderLink } from "@/utils/whatsapp";
-import { getEmailOrderLink } from "@/utils/email";
+import { CatalogueService } from "@/lib/services/catalogue.service";
+import { getWhatsAppOrderLink } from "@/lib/utils/whatsapp";
+import { getEmailOrderLink } from "@/lib/utils/email";
 import { notFound } from 'next/navigation';
 
 interface Props {
@@ -14,7 +14,7 @@ interface Props {
 
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
+  const product = await CatalogueService.getProductBySlug(slug);
 
   if (!product) {
     notFound();
@@ -22,6 +22,7 @@ export default async function ProductPage({ params }: Props) {
 
   const whatsappLink = getWhatsAppOrderLink(product);
   const emailLink = getEmailOrderLink(product);
+  const relatedProducts = await CatalogueService.getRelatedProducts(product);
 
   return (
     <main>
@@ -31,7 +32,7 @@ export default async function ProductPage({ params }: Props) {
         emailLink={emailLink}
       />
       <ProductSpecs product={product} />
-      <RelatedProducts product={product} />
+      <RelatedProducts product={product} relatedProducts={relatedProducts} />
     </main>
   );
 }

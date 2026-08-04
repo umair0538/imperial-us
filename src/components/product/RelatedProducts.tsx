@@ -3,23 +3,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Product, products } from "@/data/products";
+import type { Product } from "@/types/catalogue";
 import styles from "./RelatedProducts.module.css";
 
 interface Props {
   product: Product;
+  relatedProducts: Product[];
 }
 
-export default function RelatedProducts({ product }: Props) {
-  const related = products
-    .filter(
-      (p) =>
-        p.collection === product.collection &&
-        p.slug !== product.slug
-    )
-    .slice(0, 3);
+export default function RelatedProducts({ product, relatedProducts }: Props) {
 
-  if (related.length === 0) return null;
+  if (relatedProducts.length === 0) return null;
 
   return (
     <section className={styles.section}>
@@ -40,7 +34,7 @@ export default function RelatedProducts({ product }: Props) {
         </motion.div>
 
         <div className={styles.grid}>
-          {related.map((watch) => (
+          {relatedProducts.map((watch) => (
             <motion.div
               key={watch.slug}
               className={styles.card}
@@ -53,7 +47,7 @@ export default function RelatedProducts({ product }: Props) {
 
                 <div className={styles.imageWrapper}>
                   <Image
-                    src={watch.thumbnail}
+                    src={watch.heroImage}
                     alt={watch.name}
                     width={500}
                     height={500}

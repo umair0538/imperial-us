@@ -1,0 +1,17 @@
+.menu { display: flex; align-items: center; gap: 18px; }
+
+.link, .signOut {
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  letter-spacing: 1.8px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.signOut {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.link:hover, .signOut:hover { color: var(--gold); background: transparent; }

@@ -11,7 +11,7 @@ export interface Product {
   description: string;
   images: string[];
   videos: Video[];
-  thumbnail: string;
+  heroImage: string;
   type: string;
   specifications: {
     style: string;
@@ -57,7 +57,7 @@ export const products: Product[] = [
       "/images/royal/green/on-hand.png",
     ],
     videos:[],
-    thumbnail: "/images/royal/green/front.png",
+    heroImage: "/images/royal/green/front.png",
     type: "watch",
     specifications: {
       style: "Sports",
@@ -102,7 +102,7 @@ export const products: Product[] = [
       "/images/royal/blue/on-hand.png",
     ],
     videos:[],
-    thumbnail: "/images/royal/blue/front.png",
+    heroImage: "/images/royal/blue/front.png",
     type: "watch",
     specifications: {
       style: "Sports",
@@ -147,7 +147,7 @@ export const products: Product[] = [
       "/images/royal/black/on-hand.png",
     ],
     videos:[],
-    thumbnail: "/images/royal/black/front.png",
+    heroImage: "/images/royal/black/front.png",
     type: "watch",
     specifications: {
       style: "Sports",
@@ -191,7 +191,7 @@ export const products: Product[] = [
       "/images/classic/silver/on-hand.png",
     ],
     videos:[],
-    thumbnail: "/images/classic/silver/front.png",
+    heroImage: "/images/classic/silver/front.png",
     type: "watch",
     specifications: {
       style: "Formal",
@@ -236,7 +236,7 @@ export const products: Product[] = [
       "/images/classic/black/on-hand.png",
     ],
     videos:[],
-    thumbnail: "/images/classic/black/front.png",
+    heroImage: "/images/classic/black/front.png",
     type: "watch",
     specifications: {
       style: "Formal",
@@ -281,7 +281,7 @@ export const products: Product[] = [
       "/images/classic/green/on-hand.png",
     ],
     videos:[],
-    thumbnail: "/images/classic/green/front.png",
+    heroImage: "/images/classic/green/front.png",
     type: "watch",
     specifications: {
       style: "Formal",
@@ -331,7 +331,7 @@ export const products: Product[] = [
         thumbnail: "/images/regent-sunglasses/golden/angle.png",
       }
     ],
-    thumbnail: "/images/regent-sunglasses/golden/front.png",
+    heroImage: "/images/regent-sunglasses/golden/front.png",
     type: "sunglasses",
     specifications: {
       style: "Casual",
@@ -381,7 +381,7 @@ export const products: Product[] = [
         thumbnail: "/images/regent-sunglasses/silver/angle.png",
       }
     ],
-    thumbnail: "/images/regent-sunglasses/silver/front.png",
+    heroImage: "/images/regent-sunglasses/silver/front.png",
     type: "sunglasses",
     specifications: {
       style: "Casual",
@@ -431,7 +431,7 @@ export const products: Product[] = [
         thumbnail: "/images/regent-sunglasses/brown/angle.png",
       }
     ],
-    thumbnail: "/images/regent-sunglasses/brown/front.png",
+    heroImage: "/images/regent-sunglasses/brown/front.png",
     type: "sunglasses",
     specifications: {
       style: "Casual",
@@ -475,7 +475,7 @@ export const products: Product[] = [
       "/images/statesman/black/on-waist.png",
     ],
     videos:[],
-    thumbnail: "/images/statesman/black/front.png",
+    heroImage: "/images/statesman/black/front.png",
     type: "belt",
     specifications: {
       style: "Formal",
@@ -519,7 +519,7 @@ export const products: Product[] = [
       "/images/statesman/dark-brown/on-waist.png",
     ],
     videos:[],
-    thumbnail: "/images/statesman/dark-brown/front.png",
+    heroImage: "/images/statesman/dark-brown/front.png",
     type: "belt",
     specifications: {
       style: "Formal",
@@ -563,7 +563,7 @@ export const products: Product[] = [
       "/images/statesman/light-brown/on-waist.png",
     ],
     videos:[],
-    thumbnail: "/images/statesman/light-brown/front.png",
+    heroImage: "/images/statesman/light-brown/front.png",
     type: "belt",
     specifications: {
       style: "Formal",

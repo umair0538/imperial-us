@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import styles from "./CollectionProducts.module.css";
-import { Product } from "@/data/products";
-import { Collection } from "@/data/collections";
+import type { Product, Collection } from "@/types/catalogue";
 
 interface Props {
   collection: Collection;

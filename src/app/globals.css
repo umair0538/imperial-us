@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root{
   --black:#080808;
   --charcoal:#111111;
@@ -15,12 +17,6 @@
   --shadow:0 20px 60px rgba(0,0,0,.45);
   --transition:.35s ease;
   --container:1400px;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
 }
 
 html{
@@ -56,15 +52,6 @@ nav a{
 
 nav a:hover{
   color:var(--gold);
-}
-
-button{
-  background:transparent;
-  color:white;
-  border:1px solid var(--gold);
-  padding:16px 40px;
-  cursor:pointer;
-  transition:.3s;
 }
 
 button:hover{
@@ -214,18 +201,6 @@ blockquote {
     margin-bottom: 50px;
 }
 
-p {
-    max-width: 720px;
-
-    margin: auto;
-
-    font-size: 1.15rem;
-
-    line-height: 2;
-
-    color: var(--text-secondary);
-}
-
 @media (max-width:768px) {
 
     blockquote {
@@ -235,4 +210,27 @@ p {
     p {
         font-size: 1rem;
     }
+}
+
+@layer base {
+  button{
+    background:transparent;
+    color:white;
+    border:1px solid var(--gold);
+    padding:16px 40px;
+    cursor:pointer;
+    transition:.3s;
+  }
+
+  p {
+    max-width: 720px;
+
+    margin: auto;
+
+    font-size: 1.15rem;
+
+    line-height: 2;
+
+    color: var(--text-secondary);
+  }
 }

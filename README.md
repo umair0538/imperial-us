@@ -18,6 +18,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Authentication setup
+
+Account creation and login use Supabase email/password authentication. Configure these values in `.env.local`:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+In Supabase Authentication settings, add `http://localhost:3000/auth/confirm` and the production equivalent (for example, `https://your-domain.com/auth/confirm`) to the allowed redirect URLs. Email confirmation may remain enabled; the confirmation link signs the user in and sends them to `/account`.
+
+## Catalogue setup
+
+Run the SQL files in `supabase/migrations/` in filename order using the Supabase SQL Editor (or your normal migration workflow). The second migration seeds the four collections and all 12 products, including their existing public image and video paths. The storefront reads the catalogue from Supabase after these migrations are applied.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

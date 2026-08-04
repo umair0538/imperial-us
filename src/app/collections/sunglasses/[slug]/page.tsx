@@ -1,8 +1,5 @@
 import { notFound } from "next/navigation";
-
-import { collections } from "@/data/collections";
-import { products } from "@/data/products";
-
+import { CatalogueService } from "@/lib/services/catalogue.service";
 import CollectionHero from "@/components/collections/CollectionHero";
 import CollectionProducts from "@/components/collections/CollectionProducts";
 import CollectionFeatures from "@/components/collections/CollectionFeatures";
@@ -24,15 +21,11 @@ export default async function CollectionPage({ params }: Props) {
   const { slug } = await params;
   console.log(slug);
 
-  const collection = collections.find(
-    (c) => c.slug === slug
-  );
+  const collection = await CatalogueService.getCollectionBySlug(slug);
 
   if (!collection) notFound();
 
-  const collectionProducts = products.filter(
-    (p) => p.collection === collection.slug
-  );
+  const collectionProducts = await CatalogueService.getProductsByCollectionSlug(collection.slug);
 
   return (
     <main>

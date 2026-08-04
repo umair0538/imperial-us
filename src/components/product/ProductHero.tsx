@@ -4,9 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 import styles from "./ProductHero.module.css";
-import { Product } from "@/data/products";
+import type { Product } from "@/types/catalogue";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { useCart } from "@/features/cart/hooks/useCart";
+import { ShoppingBag } from "lucide-react";
+import { Toaster, toast } from "sonner";
 
 interface Props {
   product: Product;
@@ -24,6 +27,22 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
   const openInNewTab = (url: string) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
     if (newWindow) newWindow.opener = null
+  }
+
+  const { addItem, isAdding } = useCart();
+
+  async function handleAddToCart() {
+    const result = await addItem({
+        productId: product.id,
+        quantity: 1,
+    });
+
+    if (!result.success) {
+        toast.error(result.message);
+        return;
+    }
+
+    toast.success(`${product.name} added to your cart.`);
   }
 
   return (
@@ -140,20 +159,36 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
           <div>
             <button
               onClick={onClickUrl(whatsappLink)}
-              className={styles.button}
-            >
+              className={`
+                ${styles.button} 
+            `}>
               <FaWhatsapp />
               WhatsApp
             </button>
             
             <button
               onClick={onClickUrl(emailLink)}
-              className={styles.button}
+              className={`
+                ${styles.button} 
+            `}
             >
               <MdEmail />
               Email
             </button>
+
+            <button
+                disabled={isAdding}
+                onClick={handleAddToCart}
+                className={`
+                ${styles.button} 
+            `}
+            >
+                <ShoppingBag/>
+
+                {isAdding ? "Adding...": "Add to Cart"}
+            </button>
           </div>
+          <Toaster />
 
         </div>
       </div>

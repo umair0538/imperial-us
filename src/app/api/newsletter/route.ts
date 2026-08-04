@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { subscribe } from "@/services/newsletter.service";
+import { subscribe } from "@/lib/services/newsletter.service";
 
 export async function POST(request: Request) {
   const { email } = await request.json();

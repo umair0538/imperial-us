@@ -94,25 +94,21 @@
 }
 
 .button {
-  padding: 18px;
-  border: none;
-  background: var(--gold);
-  color: black;
-  font-weight: 600;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: .3s;
-  text-decoration: none;
-  margin-right: 20px;
+  display:inline-block;
+  padding:18px 10px;
+  border:1px solid var(--gold);
+  color:var(--text-primary);
+  text-decoration:none;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:.35s;
+  margin-right: 10px;
 }
 
 .button svg{
   margin-right: 7px;
-  font-size: 0.8rem;
-}
-
-.button:hover {
-  transform: translateY(-2px);
+  font-size: 1.3rem;
+  float: left;
 }
 
 @media (max-width: 900px) {

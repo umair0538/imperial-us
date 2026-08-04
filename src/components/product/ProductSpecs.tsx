@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import styles from "./ProductSpecs.module.css";
-import { Product } from "@/data/products";
+import type { Product } from "@/types/catalogue";
 
 interface Props {
   product: Product;

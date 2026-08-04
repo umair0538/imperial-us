@@ -6,6 +6,8 @@ import NavItem from "./NavbarItem";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import UserMenu from "@/components/auth/UserMenu";
+import CartButton from "@/features/cart/components/CartButton";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -26,7 +28,7 @@ export default function Navbar() {
 
                 <Link href="/" className={styles.logo}>
           <Image
-            src="/logo-golden.png"
+            src="/no-tagline.png"
             alt="Imperial US"
             width={85}
             height={50}
@@ -42,6 +44,10 @@ export default function Navbar() {
                             item={item}
                         />
                     ))}
+
+                    <UserMenu />
+
+                    <CartButton />
 
                 </nav>
 

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { saveContactMessage } from "@/services/contact.service";
+import { saveContactMessage } from "@/lib/services/contact.service";
 
 export async function POST(request: Request) {
   try {

@@ -1,0 +1,43 @@
+"use server";
+
+import { revalidatePath } from "next/cache";
+
+import { createClient } from "@/lib/supabase/server";
+
+import { AddressService } from "@/lib/services/address.service";
+
+export async function deleteAddress(
+  addressId: string
+) {
+  const supabase = await createClient();
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    return {
+      success: false,
+      message: "Unauthorized",
+    };
+  }
+
+  const { error } =
+    await AddressService.deleteAddress(
+      user.id,
+      addressId
+    );
+
+  if (error) {
+    return {
+      success: false,
+      message: error.message,
+    };
+  }
+
+  revalidatePath("/account/addresses");
+
+  return {
+    success: true,
+  };
+}

@@ -3,7 +3,10 @@ import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import QueryProvider from "@/providers/QueryProvider";
+import { CartDrawerProvider } from "@/features/cart/context/CartDrawerContext";
+import CartDrawer from "@/features/cart/components/CartDrawer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,10 +35,15 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${cormorant.variable}`}
       >
-        <Analytics />
-        <Navbar />
-          {children}
-        <Footer />
+        <QueryProvider>
+          <CartDrawerProvider>
+            <Analytics />
+            <Navbar />
+            <CartDrawer />
+              {children}
+            <Footer />
+          </CartDrawerProvider>
+        </QueryProvider>
       </body>
     </html>
   );
