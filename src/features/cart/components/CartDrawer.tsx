@@ -20,6 +20,9 @@ export default function CartDrawer() {
     isLoading,
   } = useCart();
 
+  if (cart.items === undefined)
+    cart.items = []
+
   return (
     <>
       {/* Backdrop */}
