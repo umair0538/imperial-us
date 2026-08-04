@@ -55,4 +55,14 @@ export class WarrantyService {
       warrantyId
     );
   }
+
+  static async getWarrantyCertificate(
+    userId: string,
+    warrantyId: string
+  ) {
+    return WarrantyRepository.getWarrantyCertificate(
+      userId,
+      warrantyId
+    );
+  }
 }

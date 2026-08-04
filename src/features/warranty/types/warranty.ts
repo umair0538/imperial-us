@@ -22,3 +22,29 @@ export interface Warranty {
 
   created_at: string;
 }
+
+interface WarrantyOrderItem {
+
+    product_name: string;
+
+    image: string;
+
+}
+
+export interface WarrantySummary {
+
+    id: string;
+
+    warranty_number: string;
+
+    start_date: string;
+
+    expiry_date: string;
+
+    status: "active" | "expired" | "void";
+
+    order_number: string;
+
+    order_items: WarrantyOrderItem;
+
+}

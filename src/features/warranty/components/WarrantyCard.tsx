@@ -41,7 +41,7 @@ export default function WarrantyCard({
 
               <h2 className="text-xl font-medium">
 
-                {warranty.product_name}
+                {warranty.order_items.product_name}
 
               </h2>
 

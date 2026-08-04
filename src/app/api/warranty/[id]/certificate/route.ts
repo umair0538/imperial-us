@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 import { createClient } from "@/lib/supabase/server";
 
-import { WarrantyService } from "@/features/warranty/services/warranty.service";
+import { WarrantyService } from "@/lib/services/warranty.service";
 
 export async function GET(
   request: Request,

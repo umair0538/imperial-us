@@ -52,7 +52,7 @@ export class OrderService {
     const { data: addresses } =
       await AddressService.getAddresses(userId);
 
-    if (addresses.length === 0) {
+    if (addresses && addresses.length === 0) {
       await AddressService.createAddress(userId, {
         label: "Home",
         firstName: address.firstName,
