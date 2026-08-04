@@ -45,8 +45,7 @@ export class OrderRepository {
     const supabase = await createClient();
 
     const items = cartItems.map((item) => {
-      const unitPrice =
-        item.product.sale_price ?? item.product.price;
+      const unitPrice = item.product.price;
 
       return {
         order_id: orderId,
@@ -61,7 +60,8 @@ export class OrderRepository {
 
     return supabase
       .from("order_items")
-      .insert(items);
+      .insert(items)
+      .select();
   }
 
   static async findByUser(userId: string) {

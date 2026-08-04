@@ -2,6 +2,8 @@ import { CartRepository } from "../repositories/cart.repository";
 import { OrderRepository } from "../repositories/order.repository";
 import type { ShippingAddress } from "@/features/checkout/types/checkout";
 import type { Result } from "../types/result";
+import { AddressService } from "@/lib/services/address.service";
+import { WarrantyService } from "@/lib/services/warranty.service";
 
 export class OrderService {
   static async placeOrder(
@@ -18,8 +20,6 @@ export class OrderService {
         message: "Your cart is empty.",
       };
     }
-
-    console.log(cart);
 
     if (cart.items.length === 0) {
       return {
@@ -49,6 +49,25 @@ export class OrderService {
       tax -
       discount;
 
+    const { data: addresses } =
+      await AddressService.getAddresses(userId);
+
+    if (addresses.length === 0) {
+      await AddressService.createAddress(userId, {
+        label: "Home",
+        firstName: address.firstName,
+        lastName: address.lastName,
+        phone: address.phone,
+        addressLine1: address.address1,
+        addressLine2: address.address2,
+        city: address.city,
+        state: address.state,
+        postalCode: address.postalCode,
+        country: address.country,
+        isDefault: true,
+      });
+    }
+
     const orderNumber =
       await this.generateOrderNumber();
 
@@ -74,10 +93,18 @@ export class OrderService {
       };
     }
 
-    await OrderRepository.createOrderItems(
+    const orderItems = await OrderRepository.createOrderItems(
       order.data.id,
       cart.items
     );
+
+    if (orderItems.error) {
+      return {
+        success: false,
+        message:
+          "Unable to create order items.",
+      };
+    }
 
     await OrderRepository.createOrderEvent({
         orderId: order.data.id,
@@ -86,6 +113,14 @@ export class OrderService {
         description:
             "Your order has been successfully received.",
     });
+
+    for (const item of orderItems.data) {
+      await WarrantyService.createWarranty(
+        order.data.id,
+        item.id,
+        userId
+      );
+  }
 
     await CartRepository.clearCart(userId);
 

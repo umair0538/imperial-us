@@ -63,7 +63,7 @@ export default function RecentOrders({
 
             <Link
               key={order.id}
-              href={`/orders/${order.id}`}
+              href={`/account/orders/${order.id}`}
               className="
                 block
                 rounded-lg
