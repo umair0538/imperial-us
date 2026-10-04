@@ -12,10 +12,10 @@ interface Props {
 
 export default function OrderHeader({ order }: Props) {
   return (
-    <header className="rounded-xl border border-zinc-800 bg-[#111111] p-8">
+    <header className="rounded-xl border p-8">
       <Link
         href="/account/orders"
-        className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-400 transition hover:text-[#C8A24B]"
+        className="mb-6 inline-flex items-center gap-2 text-sm ttransition hover:[background-color:var(--gold)]"
       >
         <ArrowLeft size={16} />
         Back to Orders
@@ -23,11 +23,11 @@ export default function OrderHeader({ order }: Props) {
 
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <h1 className="font-serif text-4xl text-white">
+          <h1 className="font-serif text-4xl">
             Order #{order.order_number}
           </h1>
 
-          <p className="mt-2 text-zinc-400">
+          <p className="mt-2">
             Placed on{" "}
             {new Date(order.created_at).toLocaleDateString(
               "en-PK",
@@ -44,11 +44,11 @@ export default function OrderHeader({ order }: Props) {
           <OrderStatusBadge status={order.status} />
 
           <div className="text-right">
-            <p className="text-sm text-zinc-500">
+            <p className="text-sm">
               Order Total
             </p>
 
-            <p className="text-2xl font-semibold text-[#C8A24B]">
+            <p className="text-2xl font-semibold">
               PKR {Number(order.total).toLocaleString()}
             </p>
           </div>

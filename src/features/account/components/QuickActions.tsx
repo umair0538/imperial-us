@@ -37,7 +37,7 @@ const actions = [
 
 export default function QuickActions() {
   return (
-    <section className="rounded-xl border border-zinc-800 bg-[#111111] p-8">
+    <section className="rounded-xl border p-8">
 
       <h2 className="mb-8 font-serif text-2xl">
         Quick Actions
@@ -56,15 +56,13 @@ export default function QuickActions() {
               className="
                 rounded-xl
                 border
-                border-zinc-800
                 p-6
                 transition
-                hover:border-[#C8A24B]
-                hover:bg-[#181818]
+                hover:[background-color:var(--gold)]
               "
             >
               <Icon
-                className="mb-4 text-[#C8A24B]"
+                className="mb-4"
                 size={28}
               />
 
@@ -72,7 +70,7 @@ export default function QuickActions() {
                 {action.title}
               </h3>
 
-              <p className="mt-2 text-sm text-zinc-500">
+              <p className="mt-2 text-sm">
                 {action.description}
               </p>
 

@@ -12,7 +12,7 @@ export default function ProfileCard({
   profile,
 }: Props) {
   return (
-    <section className="rounded-xl border border-zinc-800 bg-[#111111] p-8">
+    <section className="rounded-xl border p-8">
 
       <div className="flex flex-col items-center">
 
@@ -24,26 +24,23 @@ export default function ProfileCard({
             items-center
             justify-center
             rounded-full
-            bg-[#1b1b1b]
             border
-            border-zinc-700
           "
         >
           <User
             size={42}
-            className="text-zinc-400"
           />
         </div>
 
-        <h2 className="mt-6 text-2xl font-serif text-white">
+        <h2 className="mt-6 text-2xl font-serif">
           {profile.first_name} {profile.last_name}
         </h2>
 
-        <p className="mt-2 text-zinc-400">
+        <p className="mt-2">
           {profile.email}
         </p>
 
-        <p className="mt-2 text-sm text-zinc-500">
+        <p className="mt-2 text-sm">
           Member since{" "}
           {new Date(profile.created_at).toLocaleDateString(
             "en-PK",
@@ -78,13 +75,10 @@ export default function ProfileCard({
           w-full
           rounded-lg
           border
-          border-[#C8A24B]
           px-5
           py-3
-          text-[#C8A24B]
           transition
-          hover:bg-[#C8A24B]
-          hover:text-black
+          hover:[background-color:var(--gold)]
         "
       >
         Edit Profile
@@ -104,13 +98,13 @@ function StatCard({
   value,
 }: StatCardProps) {
   return (
-    <div className="rounded-lg bg-[#181818] p-5 text-center">
+    <div className="rounded-lg p-5 text-center">
 
-      <p className="text-sm text-zinc-500">
+      <p className="text-sm">
         {label}
       </p>
 
-      <p className="mt-2 text-2xl font-semibold text-white">
+      <p className="mt-2 text-2xl font-semibold">
         {value}
       </p>
 

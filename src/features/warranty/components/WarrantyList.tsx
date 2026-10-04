@@ -14,13 +14,13 @@ export default function WarrantyList({
 
       {warranties.length === 0 ? (
 
-        <div className="rounded-xl border border-zinc-800 py-20 text-center">
+        <div className="rounded-xl border py-20 text-center">
 
           <h2 className="text-2xl font-serif">
             No Warranties
           </h2>
 
-          <p className="mt-3 text-zinc-500">
+          <p className="mt-3">
             Your warranties will appear here
             after purchasing a watch.
           </p>

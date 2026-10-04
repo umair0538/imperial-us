@@ -18,11 +18,11 @@ export default function OrderCard({
 
   return (
 
-    <div className="rounded-xl border border-zinc-800 bg-[#111111] p-6">
+    <div className="rounded-xl border p-6">
 
       <div className="flex gap-6">
 
-        <div className="relative h-28 w-28 overflow-hidden rounded-lg bg-zinc-900">
+        <div className="relative h-28 w-28 overflow-hidden rounded-lg">
 
           <Image
             src={item.image}
@@ -41,11 +41,11 @@ export default function OrderCard({
               {item.product_name}
             </h2>
 
-            <p className="mt-1 text-sm text-zinc-500">
+            <p className="mt-1 text-sm">
               Order #{order.order_number}
             </p>
 
-            <p className="mt-2 text-sm text-zinc-500">
+            <p className="mt-2 text-sm">
 
               {new Date(
                 order.created_at
@@ -61,7 +61,7 @@ export default function OrderCard({
               status={order.status}
             />
 
-            <p className="font-semibold text-[#C8A24B]">
+            <p className="font-semibold">
 
               PKR {Number(order.total).toLocaleString()}
 
@@ -78,13 +78,10 @@ export default function OrderCard({
             className="
               rounded-lg
               border
-              border-[#C8A24B]
               px-5
               py-3
-              text-[#C8A24B]
               transition
-              hover:bg-[#C8A24B]
-              hover:text-black
+              hover:[background-color:var(--gold)]
             "
           >
             View Details

@@ -76,7 +76,7 @@ export default function ReviewForm({
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-8 rounded-xl border border-zinc-800 bg-[#111111] p-8"
+      className="space-y-8 rounded-xl border border-zinc-800 p-8"
     >
       <div>
         <h2 className="font-serif text-3xl">
@@ -85,7 +85,7 @@ export default function ReviewForm({
             : "Edit Review"}
         </h2>
 
-        <p className="mt-2 text-zinc-500">
+        <p className="mt-2">
           Share your experience with
           other customers.
         </p>
@@ -134,13 +134,11 @@ export default function ReviewForm({
           disabled={isPending}
           className="
             rounded-lg
-            bg-[#C8A24B]
             px-8
             py-3
             font-medium
-            text-black
             transition
-            hover:opacity-90
+            hover:[background-color:var(--gold)]
             disabled:opacity-50
           "
         >

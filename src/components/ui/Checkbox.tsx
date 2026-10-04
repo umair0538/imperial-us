@@ -26,8 +26,6 @@ const Checkbox = forwardRef<
             w-5
             rounded
             border
-            border-zinc-600
-            bg-zinc-900
             accent-[#C8A24B]
             focus:ring-2
             focus:ring-[#C8A24B]
@@ -36,7 +34,7 @@ const Checkbox = forwardRef<
           {...props}
         />
 
-        <span className="text-sm text-zinc-200">
+        <span className="text-sm">
           {label}
         </span>
       </label>

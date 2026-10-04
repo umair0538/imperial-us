@@ -28,7 +28,7 @@ export type CollectionRow = {
   title: string;
   subtitle: string;
   description: string;
-  hero_image: string | null;
+  hero_image: string;
 };
 
 export class CatalogueRepository {

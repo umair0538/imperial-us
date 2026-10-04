@@ -1,6 +1,6 @@
 .footer{
 
-background:#050505;
+background:var(--emerald);
 
 padding-top:120px;
 
@@ -46,9 +46,11 @@ margin-top:20px;
 
 margin-top:25px;
 
-color:#999;
+color:white;
 
 line-height:1.9;
+
+font-size: 0.9rem;
 
 }
 
@@ -56,7 +58,7 @@ line-height:1.9;
 
 font-size:1rem;
 
-color:#F5F3EF;
+color:var(--gold);
 
 margin-bottom:30px;
 
@@ -72,11 +74,13 @@ display:block;
 
 margin-bottom:18px;
 
-color:#999;
+color:white;
 
 text-decoration:none;
 
 transition:.3s;
+
+font-size: 0.9rem;
 
 }
 
@@ -106,9 +110,9 @@ gap:20px;
 
 .bottom p{
 
-color:#777;
+color:white;
 
-font-size:.9rem;
+font-size:0.9rem;
 
 }
 

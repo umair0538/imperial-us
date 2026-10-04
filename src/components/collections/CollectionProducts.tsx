@@ -37,16 +37,16 @@ export default function CollectionProducts({
             {/* Watch Image */}
 
             <motion.div
-              className={styles.image}
+              className={`${styles.image} flex-2`}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
               <Image
-                src={product.images[0]}
+                src={product.heroImage}
                 alt={product.name}
-                width={700}
+                width={1000}
                 height={700}
                 priority={index === 0}
                 onClick={openURL(`/products/${product.slug}`)}
@@ -56,25 +56,18 @@ export default function CollectionProducts({
             {/* Product Details */}
 
             <motion.div
-              className={styles.content}
+              className={`${styles.content} flex-1`}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span>
-                {collection.name} Collection
-              </span>
 
               <h2 onClick={openURL(`/products/${product.slug}`)}>
                 {product.name}
               </h2>
 
               <p>{product.description}</p>
-
-              <div className={styles.price}>
-                PKR {product.price.toLocaleString()}
-              </div>
 
               <Link
                 href={`/products/${product.slug}`}

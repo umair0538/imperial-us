@@ -77,7 +77,7 @@ export default function AddressForm({
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-8 rounded-xl border border-zinc-800 bg-[#111111] p-8"
+      className="space-y-8 rounded-xl border p-8"
     >
       <div>
         <h1 className="font-serif text-3xl">
@@ -86,7 +86,7 @@ export default function AddressForm({
             : "Edit Address"}
         </h1>
 
-        <p className="mt-2 text-zinc-500">
+        <p className="mt-2">
           Save your shipping information.
         </p>
       </div>
@@ -184,7 +184,7 @@ export default function AddressForm({
         <button
           type="submit"
           disabled={isPending}
-          className="rounded-lg bg-[#C8A24B] px-8 py-3 font-medium text-black hover:opacity-90 disabled:opacity-50"
+          className="rounded-lg px-8 py-3 font-medium hover:opacity-90 disabled:opacity-50"
         >
           {isPending
             ? "Saving..."

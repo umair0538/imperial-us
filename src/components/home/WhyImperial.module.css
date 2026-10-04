@@ -1,16 +1,6 @@
 .section{
 
-background: linear-gradient(
-      to bottom,
-      #111111 0%,
-      #222222 10%,
-      #333333 20%,
-      #333333 80%,
-      #222222 90%,
-      #111111 100%
-    );
-
-padding:160px 0;
+padding:25px 0;
 
 }
 
@@ -28,11 +18,9 @@ text-align:center;
 
 font-family:var(--font-heading);
 
-font-size:4rem;
+font-size:3rem;
 
 margin-bottom:80px;
-
-color:#F5F3EF;
 
 }
 
@@ -48,9 +36,9 @@ gap:30px;
 
 .card{
 
-background:#171717;
+background:var(--emerald);
 
-padding:50px 40px;
+padding:20px 20px;
 
 border:1px solid rgba(255,255,255,.06);
 
@@ -68,17 +56,19 @@ border-color:#C8A247;
 
 .card h3{
 
-color:#F5F3EF;
+color:var(--gold);
 
-margin-bottom:20px;
+font-weight: bold;
 
 }
 
 .card p{
 
-color:#AAA;
+color:var(--white);
 
 line-height:1.8;
+
+font-size: 0.9rem;
 
 }
 

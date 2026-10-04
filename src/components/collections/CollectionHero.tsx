@@ -4,39 +4,23 @@ import { motion } from "framer-motion";
 import styles from "./CollectionHero.module.css";
 
 interface Props {
-  name?: string;
-  subtitle?: string;
+  videoSrc?: string;
 }
 
 export default function CollectionHero({
-  name,
-  subtitle,
+  videoSrc,
 }: Props) {
   return (
     <section className={styles.hero}>
-
-      <motion.div
-        className={styles.content}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-
-        <span>{name}</span>
-
-        <h1>
-          {subtitle}
-          <br />
-          Crafted for Modern Gentlemen
-        </h1>
-
-        <p>
-          Discover collections inspired by confidence,
-          elegance and timeless craftsmanship.
-        </p>
-
-      </motion.div>
-
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className={styles.video}
+        key={videoSrc}
+        src={videoSrc}
+      />
     </section>
   );
 }

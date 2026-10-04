@@ -72,7 +72,7 @@ export default function EditProfileForm({
 
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-8 rounded-xl border border-zinc-800 bg-[#111111] p-8"
+      className="space-y-8 rounded-xl border p-8"
     >
       <div className="grid gap-6 md:grid-cols-2">
 
@@ -103,11 +103,9 @@ export default function EditProfileForm({
           disabled={isPending}
           className="
             rounded-lg
-            bg-[#C8A24B]
             px-8
             py-3
             font-medium
-            text-black
             transition
             hover:opacity-90
             disabled:cursor-not-allowed

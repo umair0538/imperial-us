@@ -28,7 +28,7 @@ export default function RecentOrders({
 
   return (
 
-    <section className="rounded-xl border border-zinc-800 bg-[#111111] p-8">
+    <section className="rounded-xl border p-8">
 
       <div className="mb-8 flex items-center justify-between">
 
@@ -38,7 +38,7 @@ export default function RecentOrders({
 
         <Link
           href="/account/orders"
-          className="text-sm text-[#C8A24B]"
+          className="text-sm"
         >
           View All
         </Link>
@@ -49,7 +49,7 @@ export default function RecentOrders({
 
         <div className="py-10 text-center">
 
-          <p className="text-zinc-500">
+          <p>
             You haven't placed any orders yet.
           </p>
 
@@ -68,10 +68,9 @@ export default function RecentOrders({
                 block
                 rounded-lg
                 border
-                border-zinc-800
                 p-5
                 transition
-                hover:border-[#C8A24B]
+                hover:[background-color:var(--gold)]
               "
             >
 
@@ -85,7 +84,7 @@ export default function RecentOrders({
 
                   </h3>
 
-                  <p className="mt-1 text-sm text-zinc-500">
+                  <p className="mt-1 text-sm">
 
                     {new Date(
                       order.created_at
@@ -103,13 +102,13 @@ export default function RecentOrders({
 
               <div className="mt-5 flex items-center justify-between">
 
-                <p className="text-sm text-zinc-500">
+                <p className="text-sm">
 
                   Total
 
                 </p>
 
-                <p className="font-semibold text-[#C8A24B]">
+                <p className="font-semibold">
 
                   PKR {Number(order.total).toLocaleString()}
 

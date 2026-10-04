@@ -57,7 +57,7 @@ export default function OrderTimeline({
           Order Cancelled
         </h2>
 
-        <p className="mt-4 text-zinc-300">
+        <p className="mt-4">
           This order has been cancelled. If you have any questions,
           please contact our support team.
         </p>
@@ -66,7 +66,7 @@ export default function OrderTimeline({
   }
 
   return (
-    <section className="rounded-xl border border-zinc-800 bg-[#111] p-8">
+    <section className="rounded-xl border p-8">
       <h2 className="mb-8 font-serif text-2xl">
         Order Progress
       </h2>

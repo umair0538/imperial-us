@@ -20,14 +20,12 @@ export default function PlaceOrderButton({
         mt-8
         w-full
         rounded-lg
-        bg-[#C8A24B]
         px-5
         py-4
         font-medium
         tracking-widest
-        text-black
         transition
-        hover:opacity-90
+        hover:[background-color:var(--gold)]
         disabled:cursor-not-allowed
         disabled:opacity-50
       "

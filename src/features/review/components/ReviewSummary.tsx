@@ -10,7 +10,7 @@ export default function ReviewSummary({
   summary,
 }: Props) {
   return (
-    <section className="rounded-xl border border-zinc-800 bg-[#111111] p-8">
+    <section className="rounded-xl border p-8">
 
       <div className="flex flex-col gap-8 md:flex-row">
 
@@ -30,7 +30,7 @@ export default function ReviewSummary({
 
           </div>
 
-          <p className="mt-3 text-zinc-500">
+          <p className="mt-3">
 
             {summary.total} Reviews
 
@@ -93,10 +93,10 @@ function RatingBar({
 
       </div>
 
-      <div className="h-3 flex-1 overflow-hidden rounded-full bg-zinc-800">
+      <div className="h-3 flex-1 overflow-hidden rounded-full">
 
         <div
-          className="h-full bg-[#C8A24B]"
+          className="h-full"
           style={{
             width: `${percentage}%`,
           }}
@@ -104,7 +104,7 @@ function RatingBar({
 
       </div>
 
-      <div className="w-10 text-right text-sm text-zinc-500">
+      <div className="w-10 text-right text-sm">
 
         {count}
 

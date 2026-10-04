@@ -14,7 +14,7 @@ export default function ReviewList({
 
     return (
 
-      <div className="rounded-xl border border-zinc-800 py-20 text-center">
+      <div className="rounded-xl border py-20 text-center">
 
         <h3 className="font-serif text-2xl">
 
@@ -22,7 +22,7 @@ export default function ReviewList({
 
         </h3>
 
-        <p className="mt-3 text-zinc-500">
+        <p className="mt-3">
 
           Be the first to review this watch.
 

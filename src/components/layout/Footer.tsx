@@ -15,11 +15,11 @@ export default function Footer() {
         <div className={styles.brand}>
 
           <Image
-            src="/logo-golden.png"
-            alt="Imperial US"
-            width={85}
-            height={50}
-            priority
+              src="/no-tagline.png"
+              alt="Imperial US"
+              width={110}
+              height={70}
+              priority
           />
 
           <p className={styles.tagline}>

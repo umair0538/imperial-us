@@ -12,7 +12,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
     return (
       <div className="space-y-2">
 
-        <label className="block text-sm font-medium text-zinc-300">
+        <label className="block text-sm font-medium">
           {label}
         </label>
 
@@ -23,13 +23,10 @@ const Input = forwardRef<HTMLInputElement, Props>(
             w-full
             rounded-lg
             border
-            border-zinc-700
-            bg-[#111]
             px-4
             py-3
             outline-none
             transition
-            focus:border-[#C8A24B]
           "
         />
 

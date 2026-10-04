@@ -4,19 +4,21 @@
   --black:#080808;
   --charcoal:#111111;
   --gold:#c8a247;
-  --emerald:#0e5b45;
+  --emerald:#408080;
   --white:#f8f8f8;
-  --bg-primary:#080808;
+  --bg-primary:#FAF9F6;
   --bg-secondary:#0D0D0D;
-  --bg-card:#151515;
-  --text-primary:#F5F3EF;
-  --text-secondary:#B8B8B8;
+  --bg-card:#FFFFFF;
+  --text-primary:#111111;
+  --text-secondary:#6B6B6B;
   --text-muted:#7A7A7A;
   --gold-light:#D6B76A;
-  --border:rgba(255,255,255,.08);
+  --border:#E8E5DF;
   --shadow:0 20px 60px rgba(0,0,0,.45);
   --transition:.35s ease;
   --container:1400px;
+  --primary-border-color: #E8E5DF;
+  --secondary-border-color: #DCD7CE;
 }
 
 html{
@@ -25,8 +27,9 @@ html{
 
 body{
   background:var(--bg-primary);
-  color:var(--white);
+  color:var(--text-primary);
   font-family:var(--font-body);
+  border-color: var(--gold);
 }
 
 h1,h2,h3{
@@ -45,13 +48,8 @@ nav{
 }
 
 nav a{
-  color:white;
   text-decoration:none;
   transition:.3s;
-}
-
-nav a:hover{
-  color:var(--gold);
 }
 
 button:hover{
@@ -201,6 +199,26 @@ blockquote {
     margin-bottom: 50px;
 }
 
+.border-x {
+  border-color: var(--gold);
+}
+
+.border-y {
+  border-color: var(--gold);
+}
+
+.border {
+  border-color: var(--gold);
+}
+
+.border-b {
+  border-color: var(--gold);
+}
+
+.border-t {
+  border-color: var(--gold);
+}
+
 @media (max-width:768px) {
 
     blockquote {
@@ -215,7 +233,6 @@ blockquote {
 @layer base {
   button{
     background:transparent;
-    color:white;
     border:1px solid var(--gold);
     padding:16px 40px;
     cursor:pointer;

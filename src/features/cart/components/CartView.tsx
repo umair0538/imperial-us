@@ -17,7 +17,7 @@ export default function CartView() {
 
   if (isLoading) {
     return (
-      <div className="py-24 text-center text-zinc-400">
+      <div className="py-24 text-center">
         Loading cart...
       </div>
     );

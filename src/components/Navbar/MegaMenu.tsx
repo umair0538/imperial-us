@@ -4,49 +4,48 @@ import Link from "next/link";
 import styles from "./Navbar.module.css";
 
 type MegaMenuProps = {
-    sections: {
-        title: string;
-        items: {
-            label: string;
-            href: string;
-            badge?: string;
-        }[];
+    collections: {
+        name: string;
+        description: string;
+        href: string;
+        image: string;
     }[];
 };
 
-export default function MegaMenu({ sections }: MegaMenuProps) {
+export default function MegaMenu({ collections }: MegaMenuProps) {
     return (
         <div className={styles.megaMenu}>
 
-            {sections.map((section) => (
+            {collections.map((collection) => (
 
-                <div
-                    key={section.title}
-                    className={styles.menuColumn}
+                <Link
+                    href={collection.href}
+                    key={collection.name}
+                    className={styles.collectionCard}
                 >
 
-                    <h4>{section.title}</h4>
+                    <div className={styles.collectionImage}>
+                        <img
+                            src={collection.image}
+                            alt={collection.name}
+                        />
+                    </div>
 
-                    {section.items.map((item) => (
+                    <div className={styles.collectionInfo}>
 
-                        <Link
-                            href={item.href}
-                            key={item.label}
-                            className={styles.menuLink}
-                        >
-                            <span>{item.label}</span>
+                        <div className={styles.collectionTitleRow}>
+                            <h4>{collection.name}</h4>
 
-                            {item.badge && (
-                                <span className={styles.badge}>
-                                    {item.badge}
-                                </span>
-                            )}
+                            <span className={styles.collectionArrow}>
+                                →
+                            </span>
+                        </div>
 
-                        </Link>
+                        <p>{collection.description}</p>
 
-                    ))}
+                    </div>
 
-                </div>
+                </Link>
 
             ))}
 

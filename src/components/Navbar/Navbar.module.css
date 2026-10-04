@@ -1,342 +1,428 @@
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+    position: fixed;
 
-  transition: all 0.35s ease;
+    top: 0;
+    left: 0;
 
-  background: transparent;
+    width: 100%;
+
+    z-index: 1000;
+
+    transition:
+        background 0.35s ease,
+        backdrop-filter 0.35s ease,
+        box-shadow 0.35s ease;
+    
+    background: #408080;
 }
 
 .scrolled {
-  background: rgba(8, 8, 8, 0.82);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.94);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid #e8e2d8;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.06);
 }
+
+
+/* ============================= */
+/* CONTAINER */
+/* ============================= */
 
 .container {
+    position: relative;
+
     max-width: 1400px;
+
+    height: 88px;
+
     margin: 0 auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 0 50px;
 
-    padding: 24px 50px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
 }
 
-.logo {
+
+/* ============================= */
+/* LEFT */
+/* ============================= */
+
+.leftControls {
     display: flex;
+
     align-items: center;
 
-    transition: transform 0.3s ease;
+    width: 180px;
+}
+
+
+/* ============================= */
+/* MENU BUTTON */
+/* ============================= */
+
+.menuButton {
+    position: relative;
+
+    width: 32px;
+    height: 24px;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.menuLine {
+    display: block;
+
+    width: 24px;
+    height: 1px;
+
+    background: currentColor;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* Make this work over your dark hero */
+
+.navbar:not(.scrolled) .menuButton {
+    color: #f5f3ef;
+}
+
+
+/* Dark text once navbar becomes light */
+
+.scrolled .menuButton {
+    color: #111111;
+}
+
+
+/* X animation */
+
+.menuLineTopOpen {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.menuLineBottomOpen {
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+
+/* ============================= */
+/* CENTER LOGO */
+/* ============================= */
+
+.logo {
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: opacity 0.25s ease;
 }
 
 .logo:hover {
-    transform: scale(1.02);
+    opacity: 0.85;
 }
 
-.navbar nav {
-  display: flex;
-  align-items: center;
-  gap: 48px;
+.logo img {
+    display: block;
+
+    width: 110px;
+
+    height: auto;
 }
 
-.navbar nav a {
-  position: relative;
-
-  text-decoration: none;
-
-  color: #F5F3EF;
-
-  font-size: 0.85rem;
-
-  letter-spacing: 2.5px;
-
-  text-transform: uppercase;
-
-  font-weight: 400;
-
-  transition: color .3s ease;
-}
-
-.navItem {
-    position: relative;
-}
-
-.navButton,
-.navItem a {
-    position: relative;
-
-  text-decoration: none;
-
-  color: #F5F3EF;
-
-  font-size: 0.85rem;
-
-  letter-spacing: 2.5px;
-
-  text-transform: uppercase;
-
-  font-weight: 400;
-
-  transition: color .3s ease;
-  border: none;
-}
-
-.navButton:hover,
-.navbar nav a:hover {
-
-  color: #C8A247;
-
-}
 
 /* ============================= */
-/* MEGA MENU */
+/* RIGHT */
 /* ============================= */
 
-.megaMenu {
-    position: absolute;
-
-    top: 55px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
+.rightControls {
     display: flex;
-
-    gap: 70px;
-
-    min-width: 700px;
-
-    padding: 40px;
-
-    background: white;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.08);
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: .25s;
-
-    z-index: 999;
-
-    background: rgba(8, 8, 8, 0.95);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-}
-
-.navItem:hover .megaMenu {
-
-    opacity: 1;
-
-    visibility: visible;
-
-    transform:
-        translateX(-50%)
-        translateY(0);
-}
-
-/* ============================= */
-/* MENU COLUMN */
-/* ============================= */
-
-.menuColumn {
-    min-width: 180px;
-}
-
-.menuColumn h4 {
-
-    font-size: 13px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 20px;
-
-    color: #999;
-}
-
-/* ============================= */
-/* LINKS */
-/* ============================= */
-
-.menuLink {
-
-    display: flex;
-
-    justify-content: space-between;
 
     align-items: center;
 
-    padding: 10px 0;
+    justify-content: flex-end;
 
-    color: #222;
+    gap: 24px;
+
+    width: 180px;
+}
+
+
+/* ============================= */
+/* FULL MENU */
+/* ============================= */
+
+.fullMenu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e8e2d8;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+    max-height: calc(100vh - 88px);
+
+    overflow-y: auto;
+}
+
+.fullMenuOpen {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+
+.menuContent {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 42px 30px 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+/* ============================= */
+/* SIDE MENU ITEMS */
+/* ============================= */
+
+.menuContent .navItem {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.menuContent .navItem > a,
+.menuContent .navButton {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: auto;
+
+    padding: 4px 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #111111;
 
     text-decoration: none;
 
-    transition: .2s;
+    font-size: 16px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: color 0.25s ease;
+
+    border: none;
 }
 
-.menuLink:hover {
+.menuContent .navItem > a:hover,
+.menuContent .navButton:hover {
+    color: #c8a247;
 
-    color: #8b7355;
-
-    transform: translateX(4px);
+    background: transparent;
 }
 
-/* ============================= */
-/* BADGES */
-/* ============================= */
-
-.badge {
-
-    font-size: 11px;
-
-    padding: 4px 8px;
-
-    border-radius: 20px;
-
-    background: #f3f3f3;
-
-    color: #777;
-
-    font-weight: 500;
-}
-
-/* ============================= */
-/* DROPDOWN */
-/* ============================= */
-
-.dropdown {
-
+.megaMenuWrapper {
     position: absolute;
 
-    top: 55px;
-    right: 0;
+    top: 100%;
 
-    min-width: 240px;
+    left: 50%;
 
-    border-radius: 16px;
+    z-index: 1000;
 
-    padding: 16px 0;
+    transform: translateX(-50%);
 
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.08);
-
-    opacity: 0;
     visibility: hidden;
 
-    transition: .25s;
+    opacity: 0;
 
-    background: rgba(8, 8, 8, 0.95);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+    pointer-events: none;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    transition:
+        opacity 200ms ease,
+        visibility 200ms ease;
 }
 
-.navItem:hover .dropdown {
+.navItem:hover .megaMenuWrapper {
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  width: 180px;
+
+  color: #ffffff;
+}
+
+.navbar.scrolled .rightControls {
+  color: #111111;
+}
+
+.rightControls button,
+.rightControls a {
+  color: inherit;
+  border: none;
+}
+
+.rightControls svg {
+  color: currentColor;
+}
+
+/* ============================= */
+/* SIDE MENU DROPDOWN */
+/* ============================= */
+
+.menuContent .dropdown {
+    position: static;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: 10px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    box-shadow: none;
 
     opacity: 1;
 
     visibility: visible;
+
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
 }
 
-.dropdownItem {
-
+.menuContent .dropdownItem {
     display: block;
 
-    padding: 12px 24px;
+    width: auto;
 
-    color: #222;
+    padding: 7px 0;
+
+    color: #6b6b6b;
 
     text-decoration: none;
 
-    transition: .2s;
+    font-size: 14px;
+
+    letter-spacing: 1.2px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.dropdownItem:hover {
+.menuContent .dropdownItem:hover {
+    color: #c8a247;
 
-    color: #8b7355;
-
-    transform: translateX(4px);
-}
-
-.navbar nav a::after {
-
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-
-  bottom: -8px;
-
-  width: 0;
-
-  height: 1px;
-
-  background: #C8A247;
-
-  transition: width .35s ease;
-}
-
-.navItem::after {
-
-    content: "";
-
-  position: absolute;
-
-  left: 0;
-
-  bottom: -8px;
-
-  width: 0;
-
-  height: 1px;
-
-  background: #C8A247;
-
-  transition: width .35s ease;
-  background: transparent;
-}
-
-.navItem:hover::after {
-
-    width: 100%;
-}
-
-.navButton:hover {
-    background: transparent;
-}
-
-/* ============================= */
-/* MOBILE */
-/* ============================= */
-
-@media (max-width: 992px) {
-
-    .nav {
-
-        display: none;
-    }
-
+    transform: translateX(3px);
 }

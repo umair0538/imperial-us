@@ -1,0 +1,19 @@
+.section{
+    max-width:80rem;
+    margin:80px auto;
+    padding:0 24px;
+}
+
+.section h2{
+    color:#d4af37;
+    margin-bottom:24px;
+    font-size:3rem;
+}
+
+.section p{
+    color: var(--text-secondary);
+    margin: auto;
+    font-size: 0.9rem;
+    line-height: 2;
+    max-width: fit-content;
+}

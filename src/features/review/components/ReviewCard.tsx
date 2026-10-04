@@ -16,7 +16,7 @@ export default function ReviewCard({
 
   return (
 
-    <div className="rounded-xl border border-zinc-800 bg-[#111111] p-8">
+    <div className="rounded-xl border p-8">
 
       <div className="flex items-center justify-between">
 
@@ -24,7 +24,7 @@ export default function ReviewCard({
           value={review.rating}
         />
 
-        <span className="text-sm text-zinc-500">
+        <span className="text-sm">
 
           {new Date(
             review.created_at
@@ -44,7 +44,7 @@ export default function ReviewCard({
 
         {review.verified_purchase && (
 
-          <div className="mt-2 flex items-center gap-2 text-sm text-[#C8A24B]">
+          <div className="mt-2 flex items-center gap-2 text-sm">
 
             <BadgeCheck size={16} />
 
@@ -66,7 +66,7 @@ export default function ReviewCard({
 
       )}
 
-      <p className="mt-3 whitespace-pre-line leading-7 text-zinc-300">
+      <p className="mt-3 whitespace-pre-line leading-7">
 
         {review.comment}
 

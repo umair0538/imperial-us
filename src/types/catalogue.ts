@@ -20,5 +20,5 @@ export interface Collection {
   title: string;
   subtitle: string;
   description: string;
-  heroImage: string | null;
+  heroImage: string;
 }

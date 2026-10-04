@@ -18,7 +18,7 @@ export default function WarrantyDetails({
 
     <div className="space-y-8">
 
-      <div className="rounded-xl border border-zinc-800 bg-[#111111] p-8">
+      <div className="rounded-xl border p-8">
 
         <div className="flex gap-8">
 
@@ -93,7 +93,7 @@ export default function WarrantyDetails({
 
               <Link
                 href={`/account/warranty/${warranty.id}/certificate`}
-                className="rounded-lg bg-[#C8A24B] px-6 py-3 font-medium text-black"
+                className="rounded-lg px-6 py-3 font-medium hover:[background-color:var(--gold)]"
               >
                 Download Certificate
               </Link>
@@ -123,7 +123,7 @@ function Info({
 }: InfoProps) {
   return (
     <div>
-      <p className="text-sm text-zinc-500">
+      <p className="text-sm">
         {label}
       </p>
 

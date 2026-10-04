@@ -29,23 +29,23 @@ export default function CartSummary({
   const { isOpen, closeCart } = useCartDrawer();
 
   return (
-    <div className="rounded-xl border border-zinc-800 bg-[#111111] p-6">
-      <h2 className="mb-6 font-serif text-2xl text-white">
+    <div className="rounded-xl border p-6">
+      <h2 className="mb-6 font-serif text-2xl">
         Order Summary
       </h2>
 
       <div className="space-y-4">
 
-        <div className="flex justify-between text-zinc-300">
+        <div className="flex justify-between">
           <span>Subtotal</span>
           <span>${subtotal.toFixed(2)}</span>
         </div>
 
-        <div className="flex justify-between text-zinc-300">
+        <div className="flex justify-between">
           <span>Shipping</span>
 
           {shipping === 0 ? (
-            <span className="text-zinc-500">
+            <span>
               Calculated at checkout
             </span>
           ) : (
@@ -61,18 +61,18 @@ export default function CartSummary({
         )}
 
         {tax > 0 && (
-          <div className="flex justify-between text-zinc-300">
+          <div className="flex justify-between">
             <span>Tax</span>
             <span>${tax.toFixed(2)}</span>
           </div>
         )}
 
-        <div className="my-4 border-t border-zinc-800" />
+        <div className="my-4 border-t" />
 
-        <div className="flex justify-between text-lg font-semibold text-white">
+        <div className="flex justify-between text-lg font-semibold">
           <span>Total</span>
 
-          <span className="text-[#C8A24B]">
+          <span>
             ${total.toFixed(2)}
           </span>
         </div>
@@ -91,18 +91,14 @@ export default function CartSummary({
               gap-2
               rounded-lg
               border
-              border-[#C8A24B]
-              bg-black
               px-5
               py-4
               text-sm
               font-medium
               tracking-widest
-              text-[#C8A24B]
               transition-all
               duration-200
-              hover:bg-[#C8A24B]
-              hover:text-black
+              hover:[background-color:var(--gold)]
             "
             onClick={closeCart}
           >
@@ -128,18 +124,14 @@ export default function CartSummary({
               gap-2
               rounded-lg
               border
-              border-[#C8A24B]
-              bg-black
               px-5
               py-4
               text-sm
               font-medium
               tracking-widest
-              text-[#C8A24B]
               transition-all
               duration-200
-              hover:bg-[#C8A24B]
-              hover:text-black
+              hover:[background-color:var(--gold)]
             "
             onClick={closeCart}
           >

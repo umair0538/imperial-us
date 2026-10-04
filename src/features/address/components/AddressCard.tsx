@@ -53,7 +53,7 @@ export default function AddressCard({
       : Home;
 
   return (
-    <div className="rounded-xl border border-zinc-800 bg-[#111111] p-6">
+    <div className="rounded-xl border p-6">
 
       <div className="flex items-start justify-between">
 
@@ -61,7 +61,6 @@ export default function AddressCard({
 
           <Icon
             size={22}
-            className="text-[#C8A24B]"
           />
 
           <div>
@@ -71,7 +70,7 @@ export default function AddressCard({
             </h3>
 
             {address.is_default && (
-              <div className="mt-2 inline-flex items-center gap-2 rounded-full bg-[#C8A24B]/10 px-3 py-1 text-xs text-[#C8A24B]">
+              <div className="mt-2 inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs">
 
                 <Star size={12} />
 
@@ -86,7 +85,7 @@ export default function AddressCard({
 
       </div>
 
-      <div className="mt-6 space-y-2 text-zinc-300">
+      <div className="mt-6 space-y-2">
 
         <p>
           {address.first_name} {address.last_name}
@@ -114,14 +113,14 @@ export default function AddressCard({
 
         <Link
           href={`/account/addresses/${address.id}/edit`}
-          className="rounded-lg border border-[#C8A24B] px-4 py-2 text-sm text-[#C8A24B] transition hover:bg-[#C8A24B] hover:text-black"
+          className="rounded-lg border border-[#C8A24B] px-4 py-2 text-sm transition hover:[background-color:var(--gold)]"
         >
           Edit
         </Link>
 
         {!address.is_default && (
           <button
-            className="rounded-lg border border-zinc-700 px-4 py-2 text-sm transition hover:border-zinc-500"
+            className="rounded-lg border px-4 py-2 text-sm transition hover:[background-color:var(--gold)]"
             onClick={() => handleMakeDefault(address.id)}
             disabled={isPending}
           >
@@ -130,7 +129,7 @@ export default function AddressCard({
         )}
 
         <button
-          className="rounded-lg border border-red-700 px-4 py-2 text-sm text-red-400 transition hover:bg-red-600 hover:text-white"
+          className="rounded-lg border border-red-700 px-4 py-2 text-sm text-red-400 transition hover:[background-color:var(--gold)]"
           onClick={() => handleDelete(address.id)}
           disabled={isPending}
         >

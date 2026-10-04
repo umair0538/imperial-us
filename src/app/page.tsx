@@ -1,23 +1,21 @@
 import Hero from "@/components/home/Hero";
 import Footer from "@/components/layout/Footer";
-import RoyalCollection from "@/components/home/RoyalCollection";
-import ClassicCollection from "@/components/home/ClassicCollection";
+import CollectionBanner from "@/components/home/CollectionBanner";
 import Philosophy from "@/components/home/Philosophy";
 import WhyImperial from "@/components/home/WhyImperial";
 import Newsletter from "@/components/home/Newsletter";
-import RegentSunglassesCollection from "@/components/home/RegentSunglassesCollection";
-import StatesmanCollection from "@/components/home/StatesmanCollection";
+import ProductCategories from "@/components/home/ProductCategories";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <RoyalCollection />
-      <ClassicCollection />
-      <RegentSunglassesCollection />
-      <StatesmanCollection />
-      <Philosophy />
+      <CollectionBanner image="/images/collections/signature/banner.png" title="Signature Collection" href="/collections/signature" />
+      <ProductCategories />
+      <CollectionBanner image="/images/collections/classic/banner.png" title="Classic Collection" href="/collections/classic" />
       <WhyImperial />
+      <CollectionBanner image="/images/collections/executive/banner.png" title="Executive Collection" href="/collections/executive" />
+      <Philosophy />
       <Newsletter/>
     </>
   );

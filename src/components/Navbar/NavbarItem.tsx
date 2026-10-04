@@ -7,14 +7,21 @@ import styles from "./Navbar.module.css";
 
 type NavItemProps = {
     item: any;
+    onNavigate?: () => void;
 };
 
-export default function NavItem({ item }: NavItemProps) {
+export default function NavItem({
+    item,
+    onNavigate,
+}: NavItemProps) {
     return (
         <div className={styles.navItem}>
 
             {item.href ? (
-                <Link href={item.href}>
+                <Link
+                    href={item.href}
+                    onClick={onNavigate}
+                >
                     {item.label}
                 </Link>
             ) : (
@@ -23,12 +30,18 @@ export default function NavItem({ item }: NavItemProps) {
                         {item.label}
                     </button>
 
-                    {item.sections && (
-                        <MegaMenu sections={item.sections} />
+                    {item.collections && (
+                        <div className={styles.megaMenuWrapper}>
+                            <MegaMenu
+                                collections={item.collections}
+                            />
+                        </div>
                     )}
 
                     {item.dropdown && (
-                        <Dropdown items={item.dropdown} />
+                        <Dropdown
+                            items={item.dropdown}
+                        />
                     )}
                 </>
             )}

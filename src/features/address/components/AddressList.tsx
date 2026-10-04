@@ -26,7 +26,7 @@ export default function AddressList({
             My Addresses
           </h1>
 
-          <p className="mt-2 text-zinc-500">
+          <p className="mt-2">
             Manage your saved shipping addresses.
           </p>
 
@@ -36,11 +36,9 @@ export default function AddressList({
           href="/account/addresses/new"
           className="
             rounded-lg
-            bg-[#C8A24B]
             px-6
             py-3
             font-medium
-            text-black
           "
         >
           + Add Address
@@ -50,9 +48,9 @@ export default function AddressList({
 
       {addresses.length === 0 ? (
 
-        <div className="rounded-xl border border-zinc-800 py-20 text-center">
+        <div className="rounded-xl border py-20 text-center">
 
-          <p className="text-zinc-500">
+          <p>
 
             No saved addresses.
 

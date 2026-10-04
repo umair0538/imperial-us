@@ -21,8 +21,8 @@ export default function ShippingInformation({
   address,
 }: Props) {
   return (
-    <section className="rounded-xl border border-zinc-800 bg-[#111111] p-6">
-      <h2 className="mb-6 font-serif text-2xl text-white">
+    <section className="rounded-xl border p-6">
+      <h2 className="mb-6 font-serif text-2xl">
         Shipping Information
       </h2>
 
@@ -72,11 +72,11 @@ function InfoRow({
 }: InfoRowProps) {
   return (
     <div>
-      <p className="text-xs uppercase tracking-wider text-zinc-500">
+      <p className="text-xs uppercase tracking-wider">
         {label}
       </p>
 
-      <p className="mt-1 text-zinc-200">
+      <p className="mt-1">
         {value}
       </p>
     </div>

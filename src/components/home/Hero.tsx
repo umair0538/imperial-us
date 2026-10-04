@@ -35,23 +35,9 @@ export default function Hero() {
         src={videoSrc}
       />
 
-      <div className={styles.overlay} />
+      {/*<div className={styles.overlay} />
 
       <div className={styles.content}>
-
-        <span className={styles.brand}>
-          IMPERIAL US
-        </span>
-
-        <h1>
-          Define Your Presence
-        </h1>
-
-        <p>
-          Premium accessories crafted for
-          modern gentlemen.
-        </p>
-
         <Link 
           href="#"
           className={styles.link}
@@ -59,7 +45,7 @@ export default function Hero() {
           DISCOVER COLLECTION
         </Link>
 
-      </div>
+      </div>*/}
 
     </section>
   );

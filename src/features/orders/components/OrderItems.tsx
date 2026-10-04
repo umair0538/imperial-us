@@ -27,20 +27,20 @@ export default function OrderItems({
   orderId,
 }: Props) {
   return (
-    <section className="rounded-xl border border-zinc-800 bg-[#111111] p-8">
+    <section className="rounded-xl border p-8">
 
-      <h2 className="mb-8 font-serif text-2xl text-white">
+      <h2 className="mb-8 font-serif text-2xl">
         Order Items
       </h2>
 
-      <div className="divide-y divide-zinc-800">
+      <div className="divide-y">
 
         {items.map((item) => (
           <div
             key={item.id}
             className="flex items-center gap-5 py-6"
           >
-            <div className="relative h-24 w-24 overflow-hidden rounded-lg bg-zinc-900">
+            <div className="relative h-24 w-24 overflow-hidden rounded-lg">
               <Image
                 src={item.image}
                 alt={item.product_name}
@@ -50,22 +50,22 @@ export default function OrderItems({
             </div>
 
             <div className="flex-1">
-              <h3 className="font-medium text-white">
+              <h3 className="font-medium">
                 {item.product_name}
               </h3>
 
-              <p className="mt-2 text-sm text-zinc-500">
+              <p className="mt-2 text-sm">
                 Quantity: {item.quantity}
               </p>
 
-              <p className="mt-1 text-sm text-zinc-500">
+              <p className="mt-1 text-sm">
                 Unit Price: PKR{" "}
                 {Number(item.unit_price).toLocaleString()}
               </p>
             </div>
 
             <div className="text-right">
-              <p className="text-lg font-semibold text-[#C8A24B]">
+              <p className="text-lg font-semibold">
                 PKR{" "}
                 {Number(item.total_price).toLocaleString()}
               </p>
@@ -76,6 +76,7 @@ export default function OrderItems({
                     ? (
                         <Link
                             href={`/account/reviews/${item.review.id}/edit`}
+                            className="hover:[background-color:var(--gold)]"
                         >
                             Edit Review
                         </Link>
@@ -83,6 +84,7 @@ export default function OrderItems({
                     : (
                         <Link
                             href={`/account/orders/${orderId}/review/${item.id}`}
+                            className="hover:[background-color:var(--gold)]"
                         >
                             Leave Review
                         </Link>

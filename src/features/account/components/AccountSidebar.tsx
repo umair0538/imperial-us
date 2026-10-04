@@ -44,7 +44,7 @@ export default function AccountSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="sticky top-24 h-fit rounded-xl border border-zinc-800 bg-[#111111] p-6">
+    <aside className="sticky top-24 h-fit rounded-xl border p-6">
 
       <h2 className="mb-8 font-serif text-2xl">
         My Account
@@ -64,10 +64,10 @@ export default function AccountSidebar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-3 rounded-lg px-4 py-3 transition ${
+              className={`flex items-center gap-3 rounded-lg px-4 py-3 transition hover:[background-color:var(--gold)] ${
                 active
-                  ? "bg-[#C8A24B] text-black"
-                  : "text-zinc-300 hover:bg-zinc-900"
+                  ? "[background-color:var(--gold)]"
+                  : ""
               }`}
             >
               <Icon size={18} />
@@ -81,7 +81,7 @@ export default function AccountSidebar() {
         </div>
       </nav>
 
-      <div className="mt-10 border-t border-zinc-800 pt-6">
+      <div className="mt-10 border-t pt-6">
 
         <button
           className="

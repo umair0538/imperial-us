@@ -13,11 +13,11 @@ export default function WarrantyCard({
   warranty,
 }: Props) {
   return (
-    <div className="rounded-xl border border-zinc-800 bg-[#111111] p-6">
+    <div className="rounded-xl border p-6">
 
       <div className="flex gap-6">
 
-        <div className="relative h-28 w-28 overflow-hidden rounded-lg bg-zinc-900">
+        <div className="relative h-28 w-28 overflow-hidden rounded-lg">
 
           <Image
             src={warranty.order_items.image}
@@ -36,7 +36,6 @@ export default function WarrantyCard({
 
               <ShieldCheck
                 size={18}
-                className="text-[#C8A24B]"
               />
 
               <h2 className="text-xl font-medium">
@@ -47,7 +46,7 @@ export default function WarrantyCard({
 
             </div>
 
-            <p className="mt-2 text-sm text-zinc-500">
+            <p className="mt-2 text-sm">
 
               Warranty #
 
@@ -57,7 +56,7 @@ export default function WarrantyCard({
 
             </p>
 
-            <p className="mt-1 text-sm text-zinc-500">
+            <p className="mt-1 text-sm">
 
               Order #
 
@@ -73,13 +72,13 @@ export default function WarrantyCard({
 
             <div>
 
-              <p className="text-sm text-zinc-500">
+              <p className="text-sm">
 
                 Expires
 
               </p>
 
-              <p className="text-white">
+              <p>
 
                 {new Date(
                   warranty.expiry_date
@@ -102,7 +101,7 @@ export default function WarrantyCard({
 
           <Link
             href={`/account/warranty/${warranty.id}`}
-            className="rounded-lg border border-[#C8A24B] px-5 py-3 text-[#C8A24B] hover:bg-[#C8A24B] hover:text-black"
+            className="rounded-lg border border-[#C8A24B] px-5 py-3 hover:[background-color:var(--gold)]"
           >
             View
           </Link>

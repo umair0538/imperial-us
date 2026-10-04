@@ -30,7 +30,7 @@ export default function TimelineItem({
       </div>
 
       <div className="pb-8">
-        <h3 className="font-medium text-white">
+        <h3 className="font-medium">
           {title}
         </h3>
 

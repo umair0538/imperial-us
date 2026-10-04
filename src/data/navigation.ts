@@ -4,39 +4,36 @@ export const navigation = [
     href: "/",
   },
   {
-    label: "Shop",
-    megaMenu: true,
-    sections: [
+    label: "Collections",
+    dropdown: [
       {
-        title: "Watches",
-        items: [
-          {
-            label: "Regent",
-            href: "/collections/watches/regent-watches",
-          },
-          {
-            label: "Classic",
-            href: "/collections/watches/classic-watches",
-          },
-        ],
+        label: "Signature",
+        href: "/collections/signature",
       },
       {
-        title: "Sunglasses",
-        items: [
-          {
-            label: "Regent",
-            href: "/collections/sunglasses/regent-sunglasses",
-          },
-        ],
+        label: "Classic",
+        href: "/collections/classic",
       },
       {
-        title: "Leather Belts",
-        items: [
-          {
-            label: "Statesman",
-            href: "/collections/belts/statesman-belts",
-          },
-        ],
+        label: "Executive",
+        href: "/collections/executive",
+      },
+    ],
+  },
+  {
+    label: "Products",
+    dropdown: [
+      {
+        label: "Leather Belts",
+        href: "/products?type=belt",
+      },
+      {
+        label: "Wrist Watches",
+        href: "/products?type=watch",
+      },
+      {
+        label: "Sunglasses",
+        href: "/products?type=sunglasses",
       },
     ],
   },

@@ -30,10 +30,7 @@ export default function CartButton() {
             items-center
             justify-center
             rounded-full
-            bg-[#C8A24B]
-            text-[11px]
             font-semibold
-            text-black
           "
         >
           {itemCount}

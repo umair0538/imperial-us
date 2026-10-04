@@ -29,7 +29,7 @@ export default function OrderSummary({
   const total = subtotal + shipping + tax - discount;
 
   return (
-    <div className="rounded-xl border border-zinc-800 bg-[#111111] p-6">
+    <div className="rounded-xl border p-6">
 
       <h2 className="mb-6 font-serif text-2xl">
         Order Summary
@@ -48,7 +48,7 @@ export default function OrderSummary({
               key={item.id}
               className="flex items-center gap-4"
             >
-              <div className="relative h-16 w-16 overflow-hidden rounded-lg bg-zinc-900">
+              <div className="relative h-16 w-16 overflow-hidden rounded-lg">
 
                 <Image
                   src={item.product.heroImage}
@@ -66,7 +66,7 @@ export default function OrderSummary({
                   {item.product.name}
                 </p>
 
-                <p className="text-sm text-zinc-500">
+                <p className="text-sm">
                   Qty × {item.quantity}
                 </p>
 
@@ -83,7 +83,7 @@ export default function OrderSummary({
 
       </div>
 
-      <div className="my-8 border-t border-zinc-800" />
+      <div className="my-8 border-t" />
 
       <div className="space-y-3">
 
@@ -112,13 +112,13 @@ export default function OrderSummary({
 
       </div>
 
-      <div className="my-8 border-t border-zinc-800" />
+      <div className="my-8 border-t" />
 
       <div className="flex items-center justify-between text-xl font-semibold">
 
         <span>Total</span>
 
-        <span className="text-[#C8A24B]">
+        <span>
           ${total.toFixed(2)}
         </span>
 
