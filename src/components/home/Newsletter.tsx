@@ -41,10 +41,6 @@ export default function Newsletter() {
           Stay Connected
         </span>
 
-        <h2>
-          Join the Imperial Circle
-        </h2>
-
         <p>
           Be the first to discover new collections,
           exclusive offers and product launches.

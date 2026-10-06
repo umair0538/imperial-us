@@ -26,11 +26,6 @@ export default function RelatedProducts({ product, relatedProducts }: Props) {
           viewport={{ once: true }}
         >
           <span>You May Also Like</span>
-
-          <h2>
-            Explore More From the{" "}
-            {product.collection} Collection
-          </h2>
         </motion.div>
 
         <div className={styles.grid}>

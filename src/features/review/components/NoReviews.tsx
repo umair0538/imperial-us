@@ -9,11 +9,11 @@ export default function NoReviews() {
         size={40}
       />
 
-      <h3 className="mt-6 font-serif text-2xl">
+      <h3 className="mt-6 text-l" style={{fontFamily: "var(--font-body)"}}>
         No Reviews Yet
       </h3>
 
-      <p className="mx-auto mt-4 max-w-lg">
+      <p className="mx-auto mt-4 max-w-lg text-sm" style={{fontFamily: "var(--font-body)", color: "var(--text-secondary)"}}>
         Be the first customer to share your
         experience with this watch.
       </p>

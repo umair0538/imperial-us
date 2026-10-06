@@ -45,11 +45,12 @@
 
 .content h2 {
     margin: 0 0 32px;
-    font-size: clamp(20px, 2.1vw, 22px);
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: 0;
     color: #fff;
+    font-family: var(--font-body);
 }
 
 .button {

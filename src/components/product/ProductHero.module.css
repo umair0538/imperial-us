@@ -1,12 +1,13 @@
 .section {
-  padding: 120px 0;
+  padding: 40px 0;
   background: var(--bg-primary);
+  margin-top: 88px;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
   align-items: start;
 }
 
@@ -57,36 +58,37 @@
 }
 
 .info h1 {
-  margin: 18px 0;
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-size: clamp(2.8rem, 5vw, 3rem);
   font-weight: 500;
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--gold);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .description {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.9;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
 }
 
 .features {
   list-style: none;
   padding: 0;
-  margin: 0 0 45px;
+  margin: 0 0 30px;
 }
 
 .features li {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 18px;
-  color: var(--text-secondary);
+  margin-bottom: 10px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
 }
 
 .features svg {
@@ -103,11 +105,12 @@
   text-transform:uppercase;
   transition:.35s;
   margin-right: 10px;
+  font-size: 0.9rem;
 }
 
 .button svg{
   margin-right: 7px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   float: left;
 }
 

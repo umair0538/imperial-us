@@ -20,8 +20,10 @@ font-size:0.9rem;
 
 line-height:2;
 
-margin-top:50px;
+margin-top:20px;
 
 max-width: none;
+
+color: var(--text-primary);
 
 }

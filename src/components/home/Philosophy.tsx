@@ -17,9 +17,7 @@ export default function Philosophy() {
         <SectionTitle
           eyebrow="Our Philosophy"
           title={
-            <>
-              Where detail meets distinction.
-            </>
+            <></>
           }
           align="center"
         />

@@ -165,18 +165,8 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
               <FaWhatsapp />
               WhatsApp
             </button>
-            
-            <button
-              onClick={onClickUrl(emailLink)}
-              className={`
-                ${styles.button} 
-            `}
-            >
-              <MdEmail />
-              Email
-            </button>
 
-            <button
+            {/*<button
                 disabled={isAdding}
                 onClick={handleAddToCart}
                 className={`
@@ -186,7 +176,7 @@ export default function ProductHero({ product, whatsappLink, emailLink }: Props)
                 <ShoppingBag/>
 
                 {isAdding ? "Adding...": "Add to Cart"}
-            </button>
+            </button>*/}
           </div>
           <Toaster />
 

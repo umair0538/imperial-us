@@ -1,23 +1,24 @@
 import styles from "./WhyImperial.module.css";
 import Image from "next/image";
+import SectionTitle from "../ui/SectionTitle";
 
 const items = [
   {
-    title: "Premium Materials",
+    title: "PREMIUM MATERIALS",
     image: "/images/why-imperial/materials.png"
   },
   {
-    title: "1-Year Warranty",
+    title: "1-YEAR WARRANTY",
     text: "Every Imperial US timepiece is backed by our comprehensive warranty.",
     image: "/images/why-imperial/warranty.png"
   },
   {
-    title: "Free Delivery",
+    title: "FREE DELIVERY",
     text: "Fast and secure nationwide shipping across Pakistan.",
     image: "/images/why-imperial/delivery.png"
   },
   {
-    title: "Secure Checkout",
+    title: "SECURE CHECKOUT",
     text: "Protected payments with a smooth and trusted shopping experience.",
     image: "/images/why-imperial/checkout.png"
   }
@@ -28,9 +29,13 @@ export default function WhyImperial() {
     <section className={styles.section}>
       <div className={styles.container}>
 
-        <h2>
-          Why Imperial US
-        </h2>
+        <SectionTitle
+          eyebrow="Why Imperial US"
+          title={
+            <></>
+          }
+          align="center"
+        />
 
         <div className={styles.grid}>
           {items.map((item) => (
