@@ -36,8 +36,8 @@ export default async function ProductPage({ params }: Props) {
         whatsappLink={whatsappLink}
         emailLink={emailLink}
       />
-      <ProductReviews reviewSummary={reviewSummary.data} reviews={reviews}/>
       <ProductSpecs product={product} />
+      <ProductReviews reviewSummary={reviewSummary.data} reviews={reviews}/>
       <RelatedProducts product={product} relatedProducts={relatedProducts} />
     </main>
   );

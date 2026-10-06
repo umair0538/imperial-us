@@ -49,7 +49,7 @@ export default function WhyImperial() {
                 alt={item.title}
                 style={{ width: '100%', height: 'auto' }} 
               />
-              <h3>{item.title}</h3>
+              <h3 style={{color:"var(--text-body)"}}>{item.title}</h3>
             </div>
           ))}
         </div>

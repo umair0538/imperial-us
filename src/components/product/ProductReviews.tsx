@@ -16,7 +16,7 @@ interface Props {
 export default function ProductReviews({ reviewSummary, reviews }: Props) {
   return (
     <section className={styles.section}>
-      <div className="container">
+      <div className="container" style={{maxWidth:"60rem"}}>
 
         <motion.div
           className={styles.heading}

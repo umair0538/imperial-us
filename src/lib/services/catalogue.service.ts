@@ -25,4 +25,8 @@ export class CatalogueService {
     return related.filter((item) => item.id !== product.id)
       .slice(0, 3)
   }
+
+  static async getProductsByType(type: string) {
+    return await CatalogueRepository.getProductsByType(type);
+  }
 }

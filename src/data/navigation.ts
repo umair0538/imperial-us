@@ -25,15 +25,15 @@ export const navigation = [
     dropdown: [
       {
         label: "Leather Belts",
-        href: "/products?type=belt",
+        href: "/products/list/belt",
       },
       {
         label: "Wrist Watches",
-        href: "/products?type=watch",
+        href: "/products/list/watch",
       },
       {
         label: "Sunglasses",
-        href: "/products?type=sunglasses",
+        href: "/products/list/sunglasses",
       },
     ],
   },

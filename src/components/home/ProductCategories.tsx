@@ -5,17 +5,17 @@ import styles from "./ProductCategories.module.css";
 const categories = [
     {
         name: "Leather Belts",
-        href: "/products/leather-belts",
+        href: "/products/list/belt",
         image: "/images/collections/executive/statesman.png",
     },
     {
         name: "Wrist Watches",
-        href: "/products/wrist-watches",
+        href: "/products/list/watch",
         image: "/images/collections/signature/regent.png",
     },
     {
         name: "Sunglasses",
-        href: "/products/sunglasses",
+        href: "/products/list/sunglasses",
         image: "/images/collections/classic/vanguard.png",
     },
 ];

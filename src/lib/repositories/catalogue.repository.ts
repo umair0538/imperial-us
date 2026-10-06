@@ -122,6 +122,43 @@ export class CatalogueRepository {
     return products;
   }
 
+  static async getProductsByType(type: string) {
+    const supabase = await createClient();
+
+    const { data, error } = await supabase
+      .from("products")
+      .select(`
+        id, 
+        slug, 
+        name, 
+        description, 
+        product_type, 
+        price_amount, 
+        hero_image, 
+        specifications, 
+        collections!inner(slug), 
+        product_media(
+          kind, 
+          path, 
+          thumbnail_path, 
+          position
+        )
+      `)
+      .eq("product_type", type)
+      .eq("is_active", true)
+      .order("created_at");
+      
+    if (error) throw new Error(`Unable to load products: ${error.message}`);
+
+    let products = []
+
+    for (let i = 0; i < data.length; i++) {
+      products.push(CatalogueRepository.productFromRow(data[i]))
+    }
+
+    return products;
+  }
+
   private static productFromRow(row: any): Product {
     console.log(row);
     const media = [...row.product_media].sort((a, b) => a.position - b.position);
